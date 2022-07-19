@@ -138,7 +138,8 @@
 }
 
 .section-app {
-    box-shadow: var(--shadow-primary);
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
 }
 
 .section-app .app-title {
@@ -196,4 +197,98 @@
     width: 55px;
     height: 55px;
     font-size: 1.7rem;
+}
+
+.footer .footer-top {
+    padding: 2rem 0;
+}
+
+.footer .footer-top .footer-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gray-700);
+    margin-bottom: .75rem;
+}
+
+.footer .footer-top .footer-list > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footer-top .footer-list > ul > li > a {
+    display: inline-flex;
+    font-size: 1rem;
+    color: var(--gray-600);
+    padding: .25rem 0;
+}
+
+.footer .footer-top .footer-list > ul > li > a:hover {
+    color: var(--primary-color);
+}
+
+.footer .footer-images .footer-image {
+    box-shadow: var(--shadow-primary);
+    border-radius: .4rem;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.footer .footer-images .footer-image img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.footer .footer-item + .footer-item {
+    margin-top: 1rem;
+}
+
+.footer .footer-bottom {
+    padding: 2rem 0;
+    background-color: var(--primary-color);
+}
+
+.footer .footer-bottom .footer-item .footer-title {
+    font-size: 1.15rem;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: .75rem;
+}
+
+.footer .footer-bottom .footer-item .footer-text {
+    font-size: .95rem;
+    color: var(--gray-300);
+}
+
+.footer .footer-bottom .footer-item .footer-text + .footer-text {
+    margin-top: .5rem;
+}
+
+.footer .footer-bottom .footer-item .footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer .footer-bottom .footer-item .footer-social > a {
+    border-radius: .2rem;
+    background-color: var(--white);
+    font-size: 1.3rem;
+    color: var(--gray-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+}
+
+.footer .footer-bottom .footer-item .footer-social > a + a {
+    margin-left: .75rem;
+}
+
+.footer .footer-bottom .footer-item .footer-social > a:hover {
+    color: var(--primary-color);
 }
