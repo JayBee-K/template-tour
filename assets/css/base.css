@@ -246,6 +246,10 @@ textarea:focus {
     --bs-aspect-ratio: 42.8571428571%
 }
 
+.ratio-23x9 {
+    --bs-aspect-ratio: 39.1304347826087%
+}
+
 .rounded-xl {
     border-radius: .4rem;
 }
