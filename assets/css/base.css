@@ -64,7 +64,7 @@ textarea:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     outline: none !important;
-    border-color: #8f8d8d !important;
+    border-color: #bebdbd !important;
 }
 
 .transition-default {
@@ -246,10 +246,10 @@ textarea:focus {
     --bs-aspect-ratio: 42.8571428571%
 }
 
-.ratio-23x9 {
-    --bs-aspect-ratio: 39.1304347826087%
+.ratio-25x9 {
+    --bs-aspect-ratio: 36%
 }
 
 .rounded-xl {
-    border-radius: .4rem;
+    border-radius: .4rem !important;
 }
