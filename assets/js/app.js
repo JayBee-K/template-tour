@@ -8,6 +8,21 @@
 		}
 	}
 
+	let sliderHero = () => {
+		new Swiper('#slider-hero .swiper', {
+			speed: 1000,
+			autoplay: {
+				delay: 8000,
+				disableOnInteraction: false,
+			},
+			loop: 1,
+			navigation: {
+				nextEl: '#slider-hero .button-next',
+				prevEl: '#slider-hero .button-prev',
+			},
+		});
+	}
+
 	let sliderHotDeals = () => {
 		new Swiper('#slider-hotDeals .swiper', {
 			spaceBetween: 15,
@@ -38,6 +53,7 @@
 	}
 
 	$(function () {
+		sliderHero();
 		sliderHotDeals();
 	});
 

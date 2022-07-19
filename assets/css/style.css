@@ -53,6 +53,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
 }
 
 .slider-theme .button-theme.swiper-button-disabled {
@@ -181,4 +182,18 @@
     color: var(--gray-600);
     font-size: 1.1rem;
     overflow: hidden;
+}
+
+.section-banner .button-theme.button-prev {
+    left: 30px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.7rem;
+}
+
+.section-banner .button-theme.button-next {
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.7rem;
 }
