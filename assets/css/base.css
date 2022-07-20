@@ -157,6 +157,16 @@ textarea:focus {
     padding-right: 5px;
 }
 
+.row-75 {
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+
+.row-75 > [class*=col] {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
 .row-10 {
     margin-left: -10px;
     margin-right: -10px;

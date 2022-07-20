@@ -61,6 +61,7 @@ $(function () {
             dropdownParent: dropdownParent,
             placeholder: "Chọn địa điểm",
             templateResult: styleSelect,
+            width: '100%',
         });
     });
 
@@ -101,7 +102,7 @@ $(function () {
         $("#flightDestination").val(dariValue);
     });
 
-    const altFormat = "l, d F Y";
+    const altFormat = "d-m-Y";
     const departureFlatpickrConfig = {
         defaultDate: [Date.now()],
         mode: "single",
