@@ -914,7 +914,7 @@
 }
 
 .card-sidebar_item .card-body {
-    background-color: #f1f2f6;
+    background-color: #f9f9f9;
     padding: 10px;
 }
 
@@ -935,7 +935,7 @@
 .card-sidebar_item .card-body .form-check label {
     position: relative;
     padding-left: 25px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -990,7 +990,7 @@
 }
 
 .card-sidebar_item + .card-sidebar_item {
-    margin-top: 1rem;
+    margin-top: 20px;
 }
 
 .section-flight .flight-order .top .title {
@@ -1021,9 +1021,23 @@
     width: 100%;
     padding: 8px 15px;
     transition: .2s all ease;
-    background-color: #f1f2f6;
+    background-color: #f9f9f9;
     border-top: 1px solid var(--gray-200);
     border-right: 1px solid var(--gray-200);
+    position: relative;
+}
+
+.section-flight .flight-order .bottom ul li a:before {
+    height: 3px;
+    background-color: var(--primary-color);
+    top: -1px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s all ease;
 }
 
 .section-flight .flight-order .bottom ul li:last-child a {
@@ -1051,12 +1065,327 @@
     background-color: var(--white);
 }
 
-.section-flight .flight-order .bottom ul li.active {
-    border-top: 1px solid var(--primary-color);
+.section-flight .flight-order .bottom ul li.active a:before {
+    opacity: 1;
+    visibility: visible;
 }
 
 .section-flight .flight-order .bottom ul li.active a .day,
 .section-flight .flight-order .bottom ul li.active a .text {
     color: var(--primary-color);
     font-weight: 700;
+}
+
+.card-flight {
+    background-color: var(--white);
+    border-radius: 0;
+    border: 1px solid #dee2e6;
+    border-top: 0;
+    border-bottom: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-flight:last-child {
+    border-radius: 0 0 .25rem .25rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.card-flight + .card-flight {
+    border-top: 1px solid #dee2e6;
+}
+
+.card-flight .card-body {
+    padding: 0;
+}
+
+.card-flight .card-body .card-link {
+    display: flex;
+    align-items: center;
+}
+
+.card-flight .card-body .card-link:hover {
+    background-color: #fdfcfc;
+}
+
+.card-flight .card-body .card-link > * {
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.card-flight .card-body .card-link > .card-image {
+    width: 11%;
+}
+
+.card-flight .card-body .card-link > .card-image img {
+    max-height: 25px;
+}
+
+.card-flight .card-body .card-link > .card-code {
+    font-size: 1rem;
+    color: var(--gray-700);
+    font-weight: 500;
+    width: 8.5%;
+}
+
+.card-flight .card-body .card-link > .card-time {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    width: 16.5%;
+}
+
+.card-flight .card-body .card-link > .card-meta {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: var(--gray-800);
+}
+
+.card-flight .card-body .card-link > .card-meta span i {
+    color: #F79321;
+    font-size: 1.1rem;
+    position: relative;
+    top: 1px;
+}
+
+.card-flight .card-body .card-link > .card-meta span + span {
+    margin-left: 10px;
+}
+
+.card-flight .card-body .card-link > .card-price {
+    color: var(--danger);
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 12.5%;
+}
+
+.card-flight .card-body .card-link > .card-price sup {
+    text-decoration: underline;
+}
+
+.card-flight .card-body .card-link > .card-toggle {
+    width: 12.5%;
+}
+
+.card-flight .card-body .card-link > .card-toggle > button {
+    color: #007bff;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.card-flight .card-body .card-link > .card-toggle > button > span {
+    height: 20px;
+    width: 20px;
+    background-color: #efefef;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+}
+
+.card-flight .card-body .card-link > .card-toggle > button[aria-expanded=true] > span i:before {
+    content: "\f068";
+}
+
+.card-flight .card-body .card-link > .card-button {
+    width: 19%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card-flight .card-body .card-link > .card-button > span {
+    position: relative;
+    border: 2px solid var(--transition);
+    border-radius: 4px;
+    overflow: hidden;
+    pointer-events: auto;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem .75rem .25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    background-color: var(--danger);
+    color: var(--white);
+    box-shadow: 1px 1px 2px #eeeeee;
+}
+
+.card-flight .card-footer .card-inner {
+    padding: 10px;
+    border-top: 1px solid #dee2e6;
+    background-color: #f9f9f9;
+}
+
+.card-flight .card-footer .card-inner .top {
+    line-height: 1.7;
+    font-size: .95rem;
+}
+
+.card-flight .card-footer .card-inner .top .title {
+    font-weight: 700;
+    color: var(--gray-900);
+    font-size: 1rem;
+}
+
+.card-flight .card-footer .card-inner .top b {
+    color: var(--gray-900);
+}
+
+.card-flight .card-footer .card-inner .top .logo img {
+    height: 25px;
+}
+
+.card-flight .card-footer .card-inner .middle {
+    border-top: 1px dashed var(--gray-200);
+    border-bottom: 1px dashed var(--gray-200);
+    padding: 10px 0;
+    line-height: 1.7;
+    font-size: .95rem;
+}
+
+.card-flight .card-footer .card-inner .middle .desc {
+    color: #999;
+    font-weight: 700;
+}
+
+.card-flight .card-footer .card-inner .middle b {
+    color: var(--gray-900);
+}
+
+.card-flight .card-footer .card-inner .bottom {
+    padding: 10px 0 0;
+    line-height: 1.7;
+    font-size: .95rem;
+}
+
+.card-flight .card-footer .card-inner .bottom .item .title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.card-flight .card-footer .card-inner .bottom .item + .item {
+    margin-top: 15px;
+}
+.card-recommended {
+    border-radius: 0.4rem !important;
+}
+.card-recommended .card-img {
+    height: 275px;
+    border-radius: 0;
+    background-size: cover;
+    background-position: 50%;
+    transition: transform .25s ease-out;
+}
+
+.card-recommended .card-img-overlay {
+    transition: all .6s cubic-bezier(.22, 1, .36, 1);
+    background: transparent;
+}
+
+.card-recommended .card-img-overlay .card-inner {
+    padding: 20px;
+    position: relative;
+}
+
+.card-recommended .card-img-overlay .card-inner .card-subtitle {
+    font-weight: 400;
+    color: #f1f1f1;
+}
+
+.card-recommended .card-img-overlay .card-inner .card-title {
+    transition: all .6s cubic-bezier(.22, 1, .36, 1);
+    font-size: 1.5em;
+}
+
+.card-recommended .card-img-overlay .card-inner .card-title i {
+    position: absolute;
+    top: 3px;
+    font-size: .9em;
+    left: -70px;
+    transition: all .6s cubic-bezier(.22, 1, .36, 1);
+}
+
+.card-recommended .card-img-overlay .card-inner .card-line {
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: all .6s cubic-bezier(.22, 1, .36, 1);
+    margin: 20px 0;
+}
+
+.card-recommended .card-img-overlay .card-inner .card-price {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    transition: all .6s cubic-bezier(.22, 1, .36, 1);
+}
+
+.card-recommended .card-img-overlay .card-inner .card-price small {
+    font-weight: 400;
+    color: #f1f1f1;
+    display: inline-block;
+}
+
+.card-recommended .card-img-overlay .card-inner .card-price span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.card-recommended .card-img-overlay .card-inner .card-price span sup {
+    top: -5px;
+}
+
+.card-recommended .card-img-overlay .card-inner .card-action {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    opacity: 0;
+    font-size: 1.6em;
+    color: #f1f1f1;
+    visibility: hidden;
+    transition: all .6s cubic-bezier(.22, 1, .36, 1);
+}
+
+.card-recommended:hover .card-img {
+    transform: scale(1.1);
+}
+
+.card-recommended:hover .card-img-overlay {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, .5);
+}
+
+.card-recommended:hover .card-img-overlay .card-inner .card-title {
+    padding-left: 30px;
+}
+
+.card-recommended:hover .card-img-overlay .card-inner .card-title i {
+    left: 0;
+}
+
+.card-recommended:hover .card-img-overlay .card-inner .card-line {
+    width: 100%;
+}
+
+.card-recommended:hover .card-img-overlay .card-inner .card-price {
+    bottom: 110px;
+}
+
+.card-recommended:hover .card-img-overlay .card-inner .card-action {
+    right: 20px;
+    opacity: 1;
+    visibility: visible;
 }
