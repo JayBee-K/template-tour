@@ -329,26 +329,6 @@
     color: var(--primary-color);
 }
 
-.section-app {
-    border-top: 1px solid var(--gray-100);
-    border-bottom: 1px solid var(--gray-100);
-}
-
-.section-app .app-title {
-    color: var(--gray-800);
-    font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 1.3;
-}
-
-.section-app .app-desc .app-desc_title {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--gray-600);
-    line-height: 1.3;
-    white-space: nowrap;
-}
-
 .meta-box {
     box-shadow: var(--shadow-primary);
     padding: 1rem;
@@ -393,6 +373,8 @@
 
 .footer .footer-top {
     padding: 2rem 0;
+    background-color: var(--white);
+    border-top: 1px solid var(--gray-100);
 }
 
 .footer .footer-top .footer-title {
