@@ -400,6 +400,175 @@ $(function () {
 			dateReturnVeDoan.open();
 	});
 
+	addEventCounterActionsVeDoan(
+		".passenger-event_vedoan",
+		".value-count-baby_vedoan",
+		"#total-people_vedoan",
+		plusCounterHandleVeDoan,
+		minusCounterHandleVeDoan
+	);
+
+	function checkMaxPeopleVeDoan(
+		inputCounterElementVeDoan,
+		countVeDoan,
+		countBabyVeDoan,
+		totalCountVeDoan,
+		maxPeopleVeDoan,
+		maxBabyVeDoan
+	) {
+		if (
+			(inputCounterElementVeDoan.hasClass("value-count-baby_vedoan") && countVeDoan >= maxBabyVeDoan) ||
+			(!inputCounterElementVeDoan.hasClass("value-count-baby_vedoan") &&
+				totalCountVeDoan - countBabyVeDoan >= maxPeopleVeDoan)
+		) {
+			return true;
+		}
+
+		return false;
+	}
+
+	function plusCounterHandleVeDoan(
+		inputCounterElementVeDoan,
+		htmlCounterElementVeDoan,
+		plusCounterElementVeDoan,
+		minusCounterElementVeDoan,
+		counterBabyElementVeDoan,
+		totalCounterElementVeDoan
+	) {
+		let countVeDoan = inputCounterElementVeDoan.val();
+		let countBabyVeDoan = counterBabyElementVeDoan.val();
+		let countTextVeDoan = htmlCounterElementVeDoan.html();
+		let totalCountVeDoan = totalCounterElementVeDoan.html();
+		totalCountVeDoan = Number(totalCountVeDoan);
+		countVeDoan = Number(countVeDoan);
+		countBabyVeDoan = Number(countBabyVeDoan);
+
+		if (
+			checkMaxPeopleVeDoan(inputCounterElementVeDoan, countVeDoan, countBabyVeDoan, totalCountVeDoan, 9, 4)
+		) {
+			return;
+		}
+
+		totalCountVeDoan += 1;
+		countVeDoan += 1;
+		countTextVeDoan = countVeDoan;
+
+		minusCounterElementVeDoan.removeClass("disabled");
+
+		inputCounterElementVeDoan.val(countVeDoan);
+		htmlCounterElementVeDoan.html(countTextVeDoan);
+		totalCounterElementVeDoan.html(totalCountVeDoan);
+
+		if (
+			checkMaxPeopleVeDoan(inputCounterElementVeDoan, countVeDoan, countBabyVeDoan, totalCountVeDoan, 9, 4)
+		) {
+			plusCounterElementVeDoan.addClass("disabled");
+		}
+	}
+
+	function minusCounterHandleVeDoan(
+		inputCounterElementVeDoan,
+		htmlCounterElementVeDoan,
+		plusCounterElementVeDoan,
+		minusCounterElementVeDoan,
+		counterBabyElementVeDoan,
+		totalCounterElementVeDoan
+	) {
+		let countVeDoan = inputCounterElementVeDoan.val();
+		let countBabyVeDoan = counterBabyElementVeDoan.val();
+		let countTextVeDoan = htmlCounterElementVeDoan.html();
+		let totalCountVeDoan = totalCounterElementVeDoan.html();
+		totalCountVeDoan = Number(totalCountVeDoan);
+		countVeDoan = Number(countVeDoan);
+		countBabyVeDoan = Number(countBabyVeDoan);
+
+		if (countVeDoan <= 0 || totalCountVeDoan <= 1) {
+			return;
+		}
+
+		if (
+			checkMaxPeopleVeDoan(inputCounterElementVeDoan, countVeDoan, countBabyVeDoan, totalCountVeDoan, 9, 4)
+		) {
+			plusCounterElementVeDoan.removeClass("disabled");
+		}
+
+		countVeDoan -= 1;
+		countTextVeDoan = countVeDoan;
+		totalCountVeDoan -= 1;
+
+		inputCounterElementVeDoan.val(countVeDoan);
+		htmlCounterElementVeDoan.html(countTextVeDoan);
+		totalCounterElementVeDoan.html(totalCountVeDoan);
+
+		if (countVeDoan <= 0) {
+			minusCounterElementVeDoan.addClass("disabled");
+		}
+	}
+
+	function prepareCounterElementsVeDoan(
+		parentCounterElementVeDoan,
+		counterBabyElementVeDoan,
+		totalCounterElementVeDoan,
+		handleCounterVeDoan
+	) {
+		const inputCounterElementVeDoan = parentCounterElementVeDoan.find(
+			".value-passenger-counter_vedoan"
+		);
+		const htmlCounterElementVeDoan = parentCounterElementVeDoan.find(
+			".passenger-counter_vedoan"
+		);
+
+		const minusCounterElementVeDoan = parentCounterElementVeDoan.find(
+			".passenger-minus_vedoan"
+		);
+
+		const plusCounterElementVeDoan = parentCounterElementVeDoan.find(
+			".passenger-plus_vedoan"
+		);
+
+		return handleCounterVeDoan(
+			inputCounterElementVeDoan,
+			htmlCounterElementVeDoan,
+			plusCounterElementVeDoan,
+			minusCounterElementVeDoan,
+			counterBabyElementVeDoan,
+			totalCounterElementVeDoan
+		);
+	}
+
+	function addEventCounterActionsVeDoan(
+		counterClassVeDoan,
+		counterBabyClassVeDoan,
+		totalCounterIdVeDoan,
+		plusCounterHandleVeDoan,
+		minusCounterHandleVeDoan
+	) {
+		const totalCounterElementVeDoan = $(totalCounterIdVeDoan);
+		$(counterClassVeDoan).on("click", ".passenger-plus_vedoan", function () {
+			const parentCounterElementVeDoan = $(this).parents(counterClassVeDoan);
+			const counterBabyElementVeDoan = parentCounterElementVeDoan
+				.parents(".passenger-dropdown-container")
+				.find(counterBabyClassVeDoan);
+			prepareCounterElementsVeDoan(
+				parentCounterElementVeDoan,
+				counterBabyElementVeDoan,
+				totalCounterElementVeDoan,
+				plusCounterHandleVeDoan
+			);
+		});
+		$(counterClassVeDoan).on("click", ".passenger-minus_vedoan", function () {
+			const parentCounterElementVeDoan = $(this).parents(counterClassVeDoan);
+			const counterBabyElementVeDoan = parentCounterElementVeDoan
+				.parents(".passenger-dropdown-container")
+				.find(counterBabyClassVeDoan);
+			prepareCounterElementsVeDoan(
+				parentCounterElementVeDoan,
+				counterBabyElementVeDoan,
+				totalCounterElementVeDoan,
+				minusCounterHandleVeDoan
+			);
+		});
+	}
 
 	/***
 	 * End Vé đoàn
@@ -409,7 +578,7 @@ $(function () {
 		$(".passenger-dropdown-content").fadeIn();
 	});
 
-	$("#passenger-close").click(function (e) {
+	$(".passenger-close").click(function (e) {
 		e.stopPropagation();
 		$(".passenger-dropdown-content").fadeOut();
 	});

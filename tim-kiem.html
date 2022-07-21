@@ -209,295 +209,289 @@
                 <img src="./assets/images/banner/24h-in-saigon-banner-1.jpg" class="img-fluid" alt="">
             </a>
         </div>
-        <div class="page-search section-tab">
+        <div class="page-search section-search">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="page-search_inner">
-                            <form action="" class="mb-0">
-                                <div class="position-relative form-inner-radio mb-3">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-12">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="choose-flight-01"
-                                                       name="choose-flight" checked
-                                                       class="custom-control-input">
-                                                <label class="custom-control-label"
-                                                       for="choose-flight-01">Một chiều</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="choose-flight-02"
-                                                       name="choose-flight"
-                                                       class="custom-control-input">
-                                                <label class="custom-control-label"
-                                                       for="choose-flight-02">Chuyến khứ hồi</label>
-                                            </div>
+                <div class="search-tab">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#chuyen-bay" role="tab">
+                                Chuyến bay
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#ve-doan" role="tab">
+                                Vé đoàn
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="chuyen-bay">
+                            <div class="search-inner">
+                                <div class="row row-75 mb-3">
+                                    <div class="form-check_inner">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="choose-flight-01"
+                                                   checked
+                                                   name="choose-flight_chuyenbay" role="button">
+                                            <label class="form-check-label" role="button" for="choose-flight-01">Một
+                                                chiều</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="choose-flight-02"
+                                                   name="choose-flight_chuyenbay" role="button">
+                                            <label class=" form-check-label" role="button" for="choose-flight-02">Khứ
+                                                hồi</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row row-col-5 align-items-end">
-                                    <div class="col-lg-4">
-                                        <div class="position-relative form-inner form-choose-address">
-                                            <div class="row no-gutters">
-                                                <div class="col-md-6">
-                                                    <div class="inner position-relative trigger-select p-3 pr-lg-4">
-                                                        <label for="flightDeparture">Nơi
-                                                            đi</label>
-                                                        <div class="d-flex align-items-center box-inner">
-                                                            <i class="fad fa-plane-departure color-main h6 mb-0"></i>
-                                                            <select name="states[]" id="flightDeparture"
-                                                                    class="flight-select form-control">
-                                                                <option value=""></option>
-                                                                <option value="SUBC"
-                                                                        title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
-                                                                    Jakarta (SUBC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
-                                                                    Surabaya (SUBC)
-                                                                </option>
-                                                                <option value="JOGC"
-                                                                        title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
-                                                                    Yogyakarta (JOGC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
-                                                                    Jakarta (SUBC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
-                                                                    Surabaya (SUBC)
-                                                                </option>
-                                                                <option value="JOGC"
-                                                                        title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
-                                                                    Yogyakarta (JOGC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
-                                                                    Jakarta (SUBC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
-                                                                    Surabaya (SUBC)
-                                                                </option>
-                                                                <option value="JOGC"
-                                                                        title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
-                                                                    Yogyakarta (JOGC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
-                                                                    Jakarta (SUBC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
-                                                                    Surabaya (SUBC)
-                                                                </option>
-                                                                <option value="JOGC"
-                                                                        title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
-                                                                    Yogyakarta (JOGC)
-                                                                </option>
-                                                            </select>
-                                                        </div>
+                                <div class="row row-75 align-items-end">
+                                    <div class="col-lg-5">
+                                        <div class="row row-75">
+                                            <div class="col-lg-6">
+                                                <div class="inner trigger-select position-relative">
+                                                    <label for="flightDeparture">Nơi
+                                                        đi</label>
+                                                    <div class="d-flex align-items-center box-inner">
+                                                        <i class="fad fa-plane-departure"></i>
+                                                        <select name="states[]" id="flightDeparture"
+                                                                class="flight-select form-control">
+                                                            <option value=""></option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                        </select>
                                                     </div>
                                                 </div>
-                                                <div class="inner-icon">
-                                                    <a href="javascript:void(0)" class="form-icon"
-                                                       id="changeFlight">
-                                                        <i class="fal fa-exchange"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="inner inner-last trigger-select position-relative p-3 pl-4">
-                                                        <label>Nơi đến</label>
-                                                        <div class="d-flex align-items-center  box-inner">
-                                                            <i class="fad fa-plane-arrival  color-main h6 mb-0"></i>
-                                                            <select name="states[]" id="flightDestination"
-                                                                    data-key="1"
-                                                                    class="flight-select form-control">
-                                                                <option value=""></option>
-                                                                <option value="SUBC"
-                                                                        title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
-                                                                    Jakarta (SUBC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
-                                                                    Surabaya (SUBC)
-                                                                </option>
-                                                                <option value="JOGC"
-                                                                        title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
-                                                                    Yogyakarta (JOGC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
-                                                                    Jakarta (SUBC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
-                                                                    Surabaya (SUBC)
-                                                                </option>
-                                                                <option value="JOGC"
-                                                                        title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
-                                                                    Yogyakarta (JOGC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
-                                                                    Jakarta (SUBC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
-                                                                    Surabaya (SUBC)
-                                                                </option>
-                                                                <option value="JOGC"
-                                                                        title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
-                                                                    Yogyakarta (JOGC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
-                                                                    Jakarta (SUBC)
-                                                                </option>
-                                                                <option value="SUBC"
-                                                                        title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
-                                                                    Surabaya (SUBC)
-                                                                </option>
-                                                                <option value="JOGC"
-                                                                        title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
-                                                                    Yogyakarta (JOGC)
-                                                                </option>
-                                                            </select>
-                                                        </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="inner trigger-select inner-last position-relative">
+                                                    <label>Nơi đến</label>
+                                                    <div class="d-flex align-items-center box-inner">
+                                                        <i class="fad fa-plane-arrival"></i>
+                                                        <select name="states[]" id="flightDestination"
+                                                                data-key="1"
+                                                                class="flight-select form-control">
+                                                            <option value=""></option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
-                                        <div class="position-relative form-inner form-choose-date">
-                                            <div class="row no-gutters">
-                                                <div class="col">
-                                                    <div class="inner trigger-flat position-relative p-3"
-                                                         data-calendar="1">
-                                                        <label for="">Ngày
-                                                            khởi hành</label>
-                                                        <div class="d-flex align-items-center box-inner">
-                                                            <i class="fad fa-calendar-alt color-main h6 mb-0"></i>
-                                                            <input type="text"
-                                                                   placeholder="Chọn ngày khỏi hành"
-                                                                   class="border-0 rounded-0 py-0 form-control form-date flatpickr flatpickr-input"
-                                                                   id="date-departure"/>
-                                                        </div>
-                                                        <small class="d-inline-block mt-1 text-desc">(ÂL:
-                                                            12-02 Năm Tân Sửu )</small>
+                                    <div class="col-lg-5">
+                                        <div class="row row-75">
+                                            <div class="col" id="col-mark_chuyenbay">
+                                                <div class="inner position-relative trigger-flat_chuyenbay"
+                                                     data-calendar="1">
+                                                    <label for="">Ngày
+                                                        khởi hành</label>
+                                                    <div class="d-flex align-items-center box-inner">
+                                                        <i class="fad fa-calendar-alt"></i>
+                                                        <input type="text" placeholder="Chọn ngày khỏi hành"
+                                                               class="border-0 rounded-0 py-0 bg-transparent form-control form-date flatpickr flatpickr-input"
+                                                               id="date-departure"/>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="position-relative form-inner form-choose-people">
-                                            <div class="inner passenger-dropdown position-relative p-3">
-                                                <label for="">Hành khách</label>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="passenger-inner position-relative w-100">
-                                                        <div class="dropdown overflow-hidden">
-                                                            <span class="dropdown-toggle">
-                                                                <span>
-                                                                    <span id="total-people">1</span> hành khách
-                                                                    <input type="hidden"
-                                                                           id="value-passenger" value="1"/>
+                                            <div class="col">
+                                                <div class="inner position-relative passenger-dropdown form-choose-people">
+                                                    <label for="">Hành khách</label>
+                                                    <div class="d-flex align-items-center box-inner">
+                                                        <div class="passenger-inner position-relative w-100">
+                                                            <div class="dropdown overflow-hidden">
+                                                                <span class="dropdown-toggle d-flex align-items-center w-100">
+                                                                    <span class="w-100 d-block">
+                                                                        <span id="total-people_chuyenbay">1</span> hành khách
+                                                                        <input type="hidden"
+                                                                               id="value-passenger" value="1"/>
+                                                                    </span>
                                                                 </span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="passenger-dropdown-content"
-                                                     style="display: none">
-                                                    <div class="passenger-dropdown-container">
-                                                        <div class="border-bottom">
-                                                            <div class="passenger-title bg-light p-3 d-flex align-items-center justify-content-between">
-                                                                <div class="h6 font-weight-bold mb-0">Hành
-                                                                    khách
-                                                                </div>
-                                                                <div id="passenger-close">
-                                                                    <i class="fal fa-times"></i>
-                                                                </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="passenger-dropdown-content"
+                                                         style="display: none">
                                                         <div class="passenger-dropdown-container">
-                                                            <div class="passenger-dropdown-list">
-                                                                <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
-                                                                    <div class="passenger-list-item-left">
-                                                                        <div class="passenger-list-item-title">
-                                                                            Người lớn
-                                                                        </div>
-                                                                        <div class="passenger-list-item-subtitle">
-                                                                            > 13 tuổi
-                                                                        </div>
+                                                            <div class="border-bottom">
+                                                                <div class="passenger-title bg-light p-3 d-flex align-items-center justify-content-between">
+                                                                    <div class="h6 font-weight-bold mb-0">Hành
+                                                                        khách
                                                                     </div>
-                                                                    <div class="passenger-list-item-right">
-                                                                        <div class="passenger-event d-flex align-items-center">
-                                                                            <div class="passenger-minus passenger-circle">
-                                                                                <i class="fal fa-minus"></i>
-                                                                            </div>
-                                                                            <div class="passenger-counter">
-                                                                                1
-                                                                            </div>
-                                                                            <input type="hidden" value="1"
-                                                                                   name="value-count-adult"
-                                                                                   class="value-passenger-counter"/>
-                                                                            <div class="passenger-plus passenger-circle">
-                                                                                <i class="fal fa-plus"></i>
-                                                                            </div>
-                                                                        </div>
+                                                                    <div class="passenger-close">
+                                                                        <i class="fal fa-times"></i>
                                                                     </div>
                                                                 </div>
-                                                                <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
-                                                                    <div class="passenger-list-item-left">
-                                                                        <div class="passenger-list-item-title">
-                                                                            Children
-                                                                        </div>
-                                                                        <div class="passenger-list-item-subtitle">
-                                                                            2-12 tuổi
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="passenger-list-item-right">
-                                                                        <div class="passenger-event d-flex align-items-center">
-                                                                            <div class="passenger-minus passenger-circle disabled">
-                                                                                <i class="fal fa-minus"></i>
+                                                            </div>
+                                                            <div class="passenger-dropdown-container">
+                                                                <div class="passenger-dropdown-list">
+                                                                    <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
+                                                                        <div class="passenger-list-item-left">
+                                                                            <div class="passenger-list-item-title">
+                                                                                Người lớn
                                                                             </div>
-                                                                            <div class="passenger-counter">
-                                                                                0
-                                                                            </div>
-                                                                            <input type="hidden" value="0"
-                                                                                   name="value-count-child"
-                                                                                   class="value-passenger-counter "/>
-                                                                            <div class="passenger-plus passenger-circle">
-                                                                                <i class="fal fa-plus"></i>
+                                                                            <div class="passenger-list-item-subtitle">
+                                                                                > 13 tuổi
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
-                                                                    <div class="passenger-list-item-left">
-                                                                        <div class="passenger-list-item-title">
-                                                                            Baby
-                                                                        </div>
-                                                                        <div class="passenger-list-item-subtitle">
-                                                                            < 2 tuổi
+                                                                        <div class="passenger-list-item-right">
+                                                                            <div class="passenger-event_chuyenbay d-flex align-items-center">
+                                                                                <div class="passenger-minus_chuyenbay passenger-circle">
+                                                                                    <i class="fal fa-minus"></i>
+                                                                                </div>
+                                                                                <div class="passenger-counter_chuyenbay passenger-counter">
+                                                                                    1
+                                                                                </div>
+                                                                                <input type="hidden" value="1"
+                                                                                       name="value-count-adult"
+                                                                                       class="value-passenger-counter_chuyenbay"/>
+                                                                                <div class="passenger-plus_chuyenbay passenger-circle">
+                                                                                    <i class="fal fa-plus"></i>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="passenger-list-item-right">
-                                                                        <div class="passenger-event d-flex align-items-center">
-                                                                            <div class="passenger-minus passenger-circle disabled">
-                                                                                <i class="fal fa-minus"></i>
+                                                                    <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
+                                                                        <div class="passenger-list-item-left">
+                                                                            <div class="passenger-list-item-title">
+                                                                                Children
                                                                             </div>
-                                                                            <div class="passenger-counter">
-                                                                                0
+                                                                            <div class="passenger-list-item-subtitle">
+                                                                                2-12 tuổi
                                                                             </div>
-                                                                            <input type="hidden" value="0"
-                                                                                   name="value-count-baby"
-                                                                                   class="value-passenger-counter value-count-baby"/>
-                                                                            <div class="passenger-plus passenger-circle">
-                                                                                <i class="fal fa-plus"></i>
+                                                                        </div>
+                                                                        <div class="passenger-list-item-right">
+                                                                            <div class="passenger-event_chuyenbay d-flex align-items-center">
+                                                                                <div class="passenger-minus_chuyenbay passenger-circle disabled">
+                                                                                    <i class="fal fa-minus"></i>
+                                                                                </div>
+                                                                                <div class="passenger-counter_chuyenbay passenger-counter">
+                                                                                    0
+                                                                                </div>
+                                                                                <input type="hidden" value="0"
+                                                                                       name="value-count-child"
+                                                                                       class="value-passenger-counter_chuyenbay "/>
+                                                                                <div class="passenger-plus_chuyenbay passenger-circle">
+                                                                                    <i class="fal fa-plus"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
+                                                                        <div class="passenger-list-item-left">
+                                                                            <div class="passenger-list-item-title">
+                                                                                Baby
+                                                                            </div>
+                                                                            <div class="passenger-list-item-subtitle">
+                                                                                < 2 tuổi
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="passenger-list-item-right">
+                                                                            <div class="passenger-event_chuyenbay d-flex align-items-center">
+                                                                                <div class="passenger-minus_chuyenbay passenger-circle disabled">
+                                                                                    <i class="fal fa-minus"></i>
+                                                                                </div>
+                                                                                <div class="passenger-counter_chuyenbay passenger-counter">
+                                                                                    0
+                                                                                </div>
+                                                                                <input type="hidden" value="0"
+                                                                                       name="value-count-baby"
+                                                                                       class="value-passenger-counter_chuyenbay value-count-baby_chuyenbay"/>
+                                                                                <div class="passenger-plus_chuyenbay passenger-circle">
+                                                                                    <i class="fal fa-plus"></i>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -510,309 +504,284 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-2">
-                                        <div class="position-relative form-choose-button inner-button text-center d-none d-lg-block">
-                                            <button type="submit" class="btn btn-search">
-                                                <i class="far fa-search"></i>
-                                            </button>
-                                        </div>
-                                        <div class="position-relative form-choose-button inner-button text-center mt-4 d-block d-lg-none">
-                                            <button type="submit" class="btn btn-customize">
-                                                <span class="text">Đặt vé ngay</span>
-                                                <span class="icon"><i class="fad fa-hand-point-up"></i></span>
+                                        <div class="inner position-relative">
+                                            <button type="submit"
+                                                    class="button-theme button-theme_primary rounded-xl w-100">
+                                                <span>
+                                                    Tìm vé<i class="far fa-search ml-2"></i>
+                                                </span>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                        <div class="page-search_inner d-none">
-                            <form action="" class="mb-0">
-                                <div class="position-relative form-inner-radio mb-3">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-12">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="choose-flight-01"
-                                                       name="choose-flight" checked
-                                                       class="custom-control-input">
-                                                <label class="custom-control-label"
-                                                       for="choose-flight-01">Một chiều</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="choose-flight-02"
-                                                       name="choose-flight"
-                                                       class="custom-control-input">
-                                                <label class="custom-control-label"
-                                                       for="choose-flight-02">Chuyến khứ hồi</label>
-                                            </div>
+                        <div class="tab-pane fade" id="ve-doan">
+                            <div class="search-inner">
+                                <div class="row row-75 mb-3">
+                                    <div class="form-check_inner">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="choose-flight_vedoan-01"
+                                                   checked
+                                                   name="choose-flight_vedoan" role="button">
+                                            <label class="form-check-label" role="button" for="choose-flight_vedoan-01">Một
+                                                chiều</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="choose-flight_vedoan-02"
+                                                   name="choose-flight_vedoan" role="button">
+                                            <label class=" form-check-label" role="button" for="choose-flight_vedoan-02">Khứ
+                                                hồi</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row no-gutters">
-                                    <div class="col-lg-11">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-5">
-                                                <div class="position-relative form-inner form-choose-address">
-                                                    <div class="row no-gutters">
-                                                        <div class="col-md-6">
-                                                            <div class="inner position-relative trigger-select p-3 pr-lg-4">
-                                                                <label for="flightDeparture">Nơi
-                                                                    đi</label>
-                                                                <div class="d-flex align-items-center box-inner">
-                                                                    <i class="fad fa-plane-departure color-main h6 mb-0"></i>
-                                                                    <select name="states[]" id="flightDeparture"
-                                                                            class="flight-select form-control">
-                                                                        <option value=""></option>
-                                                                        <option value="SUBC"
-                                                                                title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
-                                                                            Jakarta (SUBC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
-                                                                            Surabaya (SUBC)
-                                                                        </option>
-                                                                        <option value="JOGC"
-                                                                                title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
-                                                                            Yogyakarta (JOGC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
-                                                                            Jakarta (SUBC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
-                                                                            Surabaya (SUBC)
-                                                                        </option>
-                                                                        <option value="JOGC"
-                                                                                title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
-                                                                            Yogyakarta (JOGC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
-                                                                            Jakarta (SUBC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
-                                                                            Surabaya (SUBC)
-                                                                        </option>
-                                                                        <option value="JOGC"
-                                                                                title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
-                                                                            Yogyakarta (JOGC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
-                                                                            Jakarta (SUBC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
-                                                                            Surabaya (SUBC)
-                                                                        </option>
-                                                                        <option value="JOGC"
-                                                                                title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
-                                                                            Yogyakarta (JOGC)
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="inner-icon">
-                                                            <a href="javascript:void(0)" class="form-icon"
-                                                               id="changeFlight">
-                                                                <i class="fal fa-exchange"></i>
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="inner inner-last trigger-select position-relative p-3 pl-4">
-                                                                <label>Nơi đến</label>
-                                                                <div class="d-flex align-items-center  box-inner">
-                                                                    <i class="fad fa-plane-arrival  color-main h6 mb-0"></i>
-                                                                    <select name="states[]" id="flightDestination"
-                                                                            data-key="1"
-                                                                            class="flight-select form-control">
-                                                                        <option value=""></option>
-                                                                        <option value="SUBC"
-                                                                                title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
-                                                                            Jakarta (SUBC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
-                                                                            Surabaya (SUBC)
-                                                                        </option>
-                                                                        <option value="JOGC"
-                                                                                title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
-                                                                            Yogyakarta (JOGC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
-                                                                            Jakarta (SUBC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
-                                                                            Surabaya (SUBC)
-                                                                        </option>
-                                                                        <option value="JOGC"
-                                                                                title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
-                                                                            Yogyakarta (JOGC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
-                                                                            Jakarta (SUBC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
-                                                                            Surabaya (SUBC)
-                                                                        </option>
-                                                                        <option value="JOGC"
-                                                                                title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
-                                                                            Yogyakarta (JOGC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
-                                                                            Jakarta (SUBC)
-                                                                        </option>
-                                                                        <option value="SUBC"
-                                                                                title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
-                                                                            Surabaya (SUBC)
-                                                                        </option>
-                                                                        <option value="JOGC"
-                                                                                title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
-                                                                            Yogyakarta (JOGC)
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                <div class="row row-75 align-items-end">
+                                    <div class="col-lg-5">
+                                        <div class="row row-75">
+                                            <div class="col-lg-6">
+                                                <div class="inner trigger-select position-relative">
+                                                    <label for="flightDeparture2">Nơi
+                                                        đi</label>
+                                                    <div class="d-flex align-items-center box-inner">
+                                                        <i class="fad fa-plane-departure"></i>
+                                                        <select name="states[]" id="flightDeparture2"
+                                                                class="flight-select form-control">
+                                                            <option value=""></option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-departure">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-departure">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-departure">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-5">
-                                                <div class="position-relative form-inner form-choose-date">
-                                                    <div class="row no-gutters">
-                                                        <div class="col">
-                                                            <div class="inner trigger-flat position-relative p-3"
-                                                                 data-calendar="1">
-                                                                <label for="">Ngày
-                                                                    khởi hành</label>
-                                                                <div class="d-flex align-items-center box-inner">
-                                                                    <i class="fad fa-calendar-alt color-main h6 mb-0"></i>
-                                                                    <input type="text"
-                                                                           placeholder="Chọn ngày khỏi hành"
-                                                                           class="border-0 rounded-0 py-0 form-control form-date flatpickr flatpickr-input"
-                                                                           id="date-departure"/>
-                                                                </div>
-                                                                <small class="d-inline-block mt-1 text-desc">(ÂL:
-                                                                    12-02 Năm Tân Sửu )</small>
-                                                            </div>
-                                                        </div>
+                                            <div class="col-lg-6">
+                                                <div class="inner trigger-select inner-last position-relative">
+                                                    <label for="flightDestination2">Nơi đến</label>
+                                                    <div class="d-flex align-items-center box-inner">
+                                                        <i class="fad fa-plane-arrival"></i>
+                                                        <select name="states[]" id="flightDestination2"
+                                                                data-key="1"
+                                                                class="flight-select form-control">
+                                                            <option value=""></option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Jakarta, Indonesia|Jakarta|SUBC|fa-plane-arrival">
+                                                                Jakarta (SUBC)
+                                                            </option>
+                                                            <option value="SUBC"
+                                                                    title="Surabaya, Indonesia|Surabaya|SUBC|fa-plane-arrival">
+                                                                Surabaya (SUBC)
+                                                            </option>
+                                                            <option value="JOGC"
+                                                                    title="Yogyakarta, Indonesia|Yogyakarta|JOGC|fa-plane-arrival">
+                                                                Yogyakarta (JOGC)
+                                                            </option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-2">
-                                                <div class="position-relative form-inner form-choose-people">
-                                                    <div class="inner passenger-dropdown position-relative p-3">
-                                                        <label for="">Hành khách</label>
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="passenger-inner position-relative w-100">
-                                                                <div class="dropdown overflow-hidden">
-                                                                    <span class="dropdown-toggle">
-                                                                        <span>
-                                                                            <span id="total-people">1</span> hành khách
-                                                                            <input type="hidden"
-                                                                                   id="value-passenger" value="1"/>
-                                                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="row row-75">
+                                            <div class="col" id="col-mark_vedoan">
+                                                <div class="inner position-relative trigger-flat_vedoan"
+                                                     data-calendar="1">
+                                                    <label for="">Ngày
+                                                        khởi hành</label>
+                                                    <div class="d-flex align-items-center box-inner">
+                                                        <i class="fad fa-calendar-alt"></i>
+                                                        <input type="text" placeholder="Chọn ngày khỏi hành"
+                                                               class="border-0 rounded-0 py-0 bg-transparent form-control form-date flatpickr flatpickr-input"
+                                                               id="date-departure_vedoan"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="inner position-relative passenger-dropdown form-choose-people">
+                                                    <label for="">Hành khách</label>
+                                                    <div class="d-flex align-items-center box-inner">
+                                                        <div class="passenger-inner position-relative w-100">
+                                                            <div class="dropdown overflow-hidden">
+                                                                <span class="dropdown-toggle d-flex align-items-center w-100">
+                                                                    <span class="w-100 d-block">
+                                                                        <span id="total-people_vedoan">1</span> hành khách
+                                                                        <input type="hidden"
+                                                                               id="value-passenger_vedoan" value="1"/>
                                                                     </span>
-                                                                </div>
+                                                                </span>
                                                             </div>
                                                         </div>
-                                                        <div class="passenger-dropdown-content"
-                                                             style="display: none">
-                                                            <div class="passenger-dropdown-container">
-                                                                <div class="border-bottom">
-                                                                    <div class="passenger-title bg-light p-3 d-flex align-items-center justify-content-between">
-                                                                        <div class="h6 font-weight-bold mb-0">Hành
-                                                                            khách
-                                                                        </div>
-                                                                        <div id="passenger-close">
-                                                                            <i class="fal fa-times"></i>
-                                                                        </div>
+                                                    </div>
+                                                    <div class="passenger-dropdown-content"
+                                                         style="display: none">
+                                                        <div class="passenger-dropdown-container">
+                                                            <div class="border-bottom">
+                                                                <div class="passenger-title bg-light p-3 d-flex align-items-center justify-content-between">
+                                                                    <div class="h6 font-weight-bold mb-0">Hành
+                                                                        khách
+                                                                    </div>
+                                                                    <div class="passenger-close">
+                                                                        <i class="fal fa-times"></i>
                                                                     </div>
                                                                 </div>
-                                                                <div class="passenger-dropdown-container">
-                                                                    <div class="passenger-dropdown-list">
-                                                                        <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
-                                                                            <div class="passenger-list-item-left">
-                                                                                <div class="passenger-list-item-title">
-                                                                                    Người lớn
-                                                                                </div>
-                                                                                <div class="passenger-list-item-subtitle">
-                                                                                    > 13 tuổi
-                                                                                </div>
+                                                            </div>
+                                                            <div class="passenger-dropdown-container">
+                                                                <div class="passenger-dropdown-list">
+                                                                    <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
+                                                                        <div class="passenger-list-item-left">
+                                                                            <div class="passenger-list-item-title">
+                                                                                Người lớn
                                                                             </div>
-                                                                            <div class="passenger-list-item-right">
-                                                                                <div class="passenger-event d-flex align-items-center">
-                                                                                    <div class="passenger-minus passenger-circle">
-                                                                                        <i class="fal fa-minus"></i>
-                                                                                    </div>
-                                                                                    <div class="passenger-counter">
-                                                                                        1
-                                                                                    </div>
-                                                                                    <input type="hidden" value="1"
-                                                                                           name="value-count-adult"
-                                                                                           class="value-passenger-counter"/>
-                                                                                    <div class="passenger-plus passenger-circle">
-                                                                                        <i class="fal fa-plus"></i>
-                                                                                    </div>
+                                                                            <div class="passenger-list-item-subtitle">
+                                                                                > 13 tuổi
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="passenger-list-item-right">
+                                                                            <div class="passenger-event_vedoan d-flex align-items-center">
+                                                                                <div class="passenger-minus_vedoan passenger-circle">
+                                                                                    <i class="fal fa-minus"></i>
+                                                                                </div>
+                                                                                <div class="passenger-counter_vedoan passenger-counter">
+                                                                                    1
+                                                                                </div>
+                                                                                <input type="hidden" value="1"
+                                                                                       name="value-count-adult"
+                                                                                       class="value-passenger-counter_vedoan"/>
+                                                                                <div class="passenger-plus_vedoan passenger-circle">
+                                                                                    <i class="fal fa-plus"></i>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
-                                                                            <div class="passenger-list-item-left">
-                                                                                <div class="passenger-list-item-title">
-                                                                                    Children
-                                                                                </div>
-                                                                                <div class="passenger-list-item-subtitle">
-                                                                                    2-12 tuổi
-                                                                                </div>
+                                                                    </div>
+                                                                    <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
+                                                                        <div class="passenger-list-item-left">
+                                                                            <div class="passenger-list-item-title">
+                                                                                Children
                                                                             </div>
-                                                                            <div class="passenger-list-item-right">
-                                                                                <div class="passenger-event d-flex align-items-center">
-                                                                                    <div class="passenger-minus passenger-circle disabled">
-                                                                                        <i class="fal fa-minus"></i>
-                                                                                    </div>
-                                                                                    <div class="passenger-counter">
-                                                                                        0
-                                                                                    </div>
-                                                                                    <input type="hidden" value="0"
-                                                                                           name="value-count-child"
-                                                                                           class="value-passenger-counter "/>
-                                                                                    <div class="passenger-plus passenger-circle">
-                                                                                        <i class="fal fa-plus"></i>
-                                                                                    </div>
+                                                                            <div class="passenger-list-item-subtitle">
+                                                                                2-12 tuổi
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="passenger-list-item-right">
+                                                                            <div class="passenger-event_vedoan d-flex align-items-center">
+                                                                                <div class="passenger-minus_vedoan passenger-circle disabled">
+                                                                                    <i class="fal fa-minus"></i>
+                                                                                </div>
+                                                                                <div class="passenger-counter_vedoan passenger-counter">
+                                                                                    0
+                                                                                </div>
+                                                                                <input type="hidden" value="0"
+                                                                                       name="value-count-child"
+                                                                                       class="value-passenger-counter_vedoan "/>
+                                                                                <div class="passenger-plus_vedoan passenger-circle">
+                                                                                    <i class="fal fa-plus"></i>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
-                                                                            <div class="passenger-list-item-left">
-                                                                                <div class="passenger-list-item-title">
-                                                                                    Baby
-                                                                                </div>
-                                                                                <div class="passenger-list-item-subtitle">
-                                                                                    < 2 tuổi
-                                                                                </div>
+                                                                    </div>
+                                                                    <div class="passenger-list-item py-2 px-3 d-flex justify-content-between align-items-center">
+                                                                        <div class="passenger-list-item-left">
+                                                                            <div class="passenger-list-item-title">
+                                                                                Baby
                                                                             </div>
-                                                                            <div class="passenger-list-item-right">
-                                                                                <div class="passenger-event d-flex align-items-center">
-                                                                                    <div class="passenger-minus passenger-circle disabled">
-                                                                                        <i class="fal fa-minus"></i>
-                                                                                    </div>
-                                                                                    <div class="passenger-counter">
-                                                                                        0
-                                                                                    </div>
-                                                                                    <input type="hidden" value="0"
-                                                                                           name="value-count-baby"
-                                                                                           class="value-passenger-counter value-count-baby"/>
-                                                                                    <div class="passenger-plus passenger-circle">
-                                                                                        <i class="fal fa-plus"></i>
-                                                                                    </div>
+                                                                            <div class="passenger-list-item-subtitle">
+                                                                                < 2 tuổi
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="passenger-list-item-right">
+                                                                            <div class="passenger-event_vedoan d-flex align-items-center">
+                                                                                <div class="passenger-minus_vedoan passenger-circle disabled">
+                                                                                    <i class="fal fa-minus"></i>
+                                                                                </div>
+                                                                                <div class="passenger-counter_vedoan passenger-counter">
+                                                                                    0
+                                                                                </div>
+                                                                                <input type="hidden" value="0"
+                                                                                       name="value-count-baby"
+                                                                                       class="value-passenger-counter_vedoan value-count-baby"/>
+                                                                                <div class="passenger-plus_vedoan passenger-circle">
+                                                                                    <i class="fal fa-plus"></i>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -825,21 +794,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-1">
-                                        <div class="position-relative form-choose-button inner-button text-center d-none d-lg-block">
-                                            <button type="submit" class="btn btn-search">
-                                                <i class="far fa-search"></i>
-                                            </button>
-                                        </div>
-                                        <div class="position-relative form-choose-button inner-button text-center mt-4 d-block d-lg-none">
-                                            <button type="submit" class="btn btn-customize">
-                                                <span class="text">Đặt vé ngay</span>
-                                                <span class="icon"><i class="fad fa-hand-point-up"></i></span>
+                                    <div class="col-lg-2">
+                                        <div class="inner position-relative">
+                                            <button type="submit"
+                                                    class="button-theme button-theme_primary rounded-xl w-100">
+                                                <span>
+                                                    Tìm vé<i class="far fa-search ml-2"></i>
+                                                </span>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
