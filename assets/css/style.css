@@ -6,13 +6,13 @@
 
 @media screen and (min-width: 1400px) {
     .container {
-        max-width: 1360px;
+        max-width: 1280px;
     }
 }
 
 @media screen and (min-width: 1600px) {
     .container {
-        max-width: 1560px;
+        max-width: 1400px;
     }
 }
 
@@ -294,59 +294,6 @@
     transform: scaleY(1);
 }
 
-.card-tour {
-    box-shadow: var(--shadow-primary);
-}
-
-.card-tour .card-body {
-    padding: 1rem;
-}
-
-.card-tour .card-body .card-title {
-    font-size: 1.15rem;
-    color: var(--gray-800);
-    font-weight: 700;
-    margin-bottom: .5rem;
-    transition: var(--transition);
-}
-
-.card-tour .card-body .card-desc {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    color: var(--gray-600);
-    line-height: 1.3;
-    margin-bottom: .75rem;
-    font-size: 1rem;
-}
-
-.card-tour .card-body .card-text {
-    color: var(--gray-600);
-    max-width: 100%;
-    font-size: .95rem;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
-    margin-bottom: 0;
-}
-
-.card-tour:hover {
-    box-shadow: var(--shadow-hover);
-}
-
-.card-tour:hover .card-header .image-cover {
-    opacity: .9;
-    transform: scale(1.025);
-}
-
-.card-tour:hover .card-body .card-title {
-    color: var(--primary-color);
-}
-
 .meta-box {
     box-shadow: var(--shadow-primary);
     padding: 1rem;
@@ -579,8 +526,8 @@
     background-color: rgba(255, 255, 255, .75);
     color: var(--gray-800);
     font-weight: 600;
-    font-size: 1.05rem;
-    padding: .5rem 1.25rem;
+    font-size: 1.15rem;
+    padding: .75rem 1.75rem;
     border-color: transparent !important;
 }
 
@@ -1018,13 +965,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     width: 100%;
-    padding: 8px 15px;
+    padding: 8px 10px;
     transition: .2s all ease;
     background-color: #f9f9f9;
     border-top: 1px solid var(--gray-200);
     border-right: 1px solid var(--gray-200);
     position: relative;
+    height: 100%;
 }
 
 .section-flight .flight-order .bottom ul li a:before {
@@ -1054,6 +1003,11 @@
     color: var(--gray-600);
     transition: .2s all ease;
     font-size: .9rem;
+}
+
+.section-flight .flight-order .bottom ul li a .text-danger {
+    font-size: .9rem;
+    font-weight: 700;
 }
 
 .section-flight .flight-order .bottom ul li:not(:last-of-type) {
@@ -1273,9 +1227,80 @@
 .card-flight .card-footer .card-inner .bottom .item + .item {
     margin-top: 15px;
 }
+
+.section-flight_round .card-flight .card-body .card-link > * {
+    padding: 8px;
+}
+
+.section-flight_round .card-flight .card-body .card-link > .card-image {
+    width: 14%;
+}
+
+.section-flight_round .card-flight .card-body .card-link > .card-code {
+    font-size: .95rem;
+    width: 14%;
+}
+
+.section-flight_round .card-flight .card-body .card-link > .card-time {
+    width: 27%;
+    font-size: 1rem;
+}
+
+.section-flight_round .card-flight .card-body .card-link > .card-price {
+    width: 21%;
+    font-size: 1rem;
+}
+
+.section-flight_round .card-flight .card-body .card-link > .card-toggle {
+    width: 7%;
+}
+
+.section-flight_round .card-flight .card-body .card-link > .card-button {
+    width: 17%;
+}
+
+.section-flight_round.section-flight .flight-order .bottom ul li a .day {
+    font-size: 1rem;
+}
+
+.section-flight_round.section-flight .flight-order .bottom ul li a .text,
+.section-flight_round.section-flight .flight-order .bottom ul li a .text-danger {
+    font-size: 13px;
+}
+
+.section-flight_round .card-flight .card-footer .card-inner .top .title {
+    font-size: .9rem;
+}
+
+.section-flight_round .card-flight .card-footer .card-inner .middle {
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.section-flight_round .card-flight .card-footer .card-inner .middle::-webkit-scrollbar {
+    width: 10px;
+    height: 4px;
+}
+
+.section-flight_round .card-flight .card-footer .card-inner .middle::-webkit-scrollbar-track {
+    background: #cecece;
+    height: 4px;
+}
+
+.section-flight_round .card-flight .card-footer .card-inner .middle::-webkit-scrollbar-thumb {
+    background: #afafaf;
+    height: 4px;
+}
+
+.section-flight_round .card-flight .card-footer .card-inner .middle::-webkit-scrollbar-thumb:hover {
+    height: 4px;
+}
+
 .card-recommended {
     border-radius: 0.4rem !important;
 }
+
 .card-recommended .card-img {
     height: 275px;
     border-radius: 0;
@@ -1388,4 +1413,158 @@
     right: 20px;
     opacity: 1;
     visibility: visible;
+}
+
+.card-tours .card-header {
+    background-color: var(--primary-color);
+}
+
+.card-tours .card-header .card-title {
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
+.card-tour_item {
+    display: flex;
+    align-items: stretch;
+}
+
+.card-tour_item > * {
+    padding: 1rem;
+    flex-shrink: 0;
+    border-right: 1px solid var(--gray-100);
+}
+
+.card-tour_item > *:last-child {
+    border-right: 0;
+}
+
+.card-tour_item .tour-item_image {
+    width: 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-tour_item .tour-item_image .airways {
+    color: var(--gray-900);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: .5rem;
+}
+
+.card-tour_item .tour-item_content {
+    width: 25%;
+}
+
+.card-tour_item .tour-item_content .title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.card-tour_item .tour-item_content .title span {
+    font-size: .95rem;
+}
+
+.card-tour_item .tour-item_content .meta {
+    margin-top: .25rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-tour_item .tour-item_content .meta .text {
+    width: 90px;
+    font-size: 1rem;
+    color: #F79321;
+}
+
+.card-tour_item .tour-item_content .meta .text i {
+    font-size: 1.15rem;
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+    width: 14px;
+}
+
+.card-tour_item .tour-item_road {
+    padding: 0;
+    width: 40%;
+}
+
+.card-tour_item .tour-item_road .item {
+    display: flex;
+    align-items: center;
+}
+
+.card-tour_item .tour-item_road .item .item-content {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    width: 33.3333%;
+}
+
+.card-tour_item .tour-item_road .item .item-content + .item-content {
+    border-left: 1px solid var(--gray-100);
+}
+
+.card-tour_item .tour-item_road .item .item-content .text {
+    font-size: .95rem;
+    color: var(--gray-400);
+    font-weight: 500;
+}
+
+.card-tour_item .tour-item_road .item .item-content .desc {
+    font-size: 1rem;
+    color: var(--gray-900);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.card-tour_item .tour-item_button {
+    width: 20%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-tour_item .tour-item_button .price {
+    display: flex;
+    align-items: flex-end;
+    white-space: nowrap;
+    margin-bottom: .5rem;
+}
+
+.card-tour_item .tour-item_button .price del {
+    color: var(--gray-500);
+    font-size: .85rem;
+    margin-left: 5px;
+}
+
+.card-tour_item .tour-item_button .price ins {
+    text-decoration: none;
+    color: var(--danger);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.card-tour_item .tour-item_button .button-theme {
+    font-size: .95rem;
+    border-radius: .4rem;
+    padding: .5rem 0.75rem .35rem;
+}
+
+.card-tour_item .tour-item_road .item + .item {
+    border-top: 1px solid var(--gray-100);
+}
+
+.card-tour_item:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.card-tour_item + .card-tour_item {
+    border-top: p1px solid var(--gray-100);
 }
