@@ -1450,6 +1450,9 @@
 
 .card-tour_item .tour-item_content {
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-tour_item .tour-item_content .title {
@@ -1484,58 +1487,51 @@
 
 .card-tour_item .tour-item_road {
     padding: 0;
-    width: 40%;
-}
-
-.card-tour_item .tour-item_road .item {
+    width: 50%;
     display: flex;
     align-items: center;
 }
 
-.card-tour_item .tour-item_road .item .item-content {
+.card-tour_item .tour-item_road .item-content {
     display: flex;
     flex-direction: column;
-    padding: .5rem;
-    width: 33.3333%;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    padding: 1rem;
 }
 
-.card-tour_item .tour-item_road .item .item-content + .item-content {
+.card-tour_item .tour-item_road .item-content + .item-content {
     border-left: 1px solid var(--gray-200);
 }
 
-.card-tour_item .tour-item_road .item .item-content .text {
+.card-tour_item .tour-item_road .item-content .text {
     font-size: .95rem;
     color: var(--gray-400);
     font-weight: 500;
 }
 
-.card-tour_item .tour-item_road .item .item-content .desc {
+.card-tour_item .tour-item_road .item-content .desc {
     font-size: 1rem;
     color: var(--gray-900);
     white-space: nowrap;
     font-weight: 600;
 }
 
-.card-tour_item .tour-item_button {
-    width: 20%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card-tour_item .tour-item_button .price {
-    display: flex;
-    align-items: flex-end;
-    white-space: nowrap;
-    margin-bottom: .5rem;
-}
-
-.card-tour_item .tour-item_button .price ins {
+.card-tour_item .tour-item_road .item-content .desc.price {
     text-decoration: none;
     color: var(--danger);
     font-weight: 700;
     font-size: 1rem;
+}
+
+.card-tour_item .tour-item_button {
+    width: 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .card-tour_item .tour-item_button .button-theme {
@@ -1544,7 +1540,7 @@
     padding: .5rem 0.75rem .35rem;
 }
 
-.card-tour_item .tour-item_road .item + .item {
+.card-tour_item .tour-item_road + .item {
     border-top: 1px solid var(--gray-200);
 }
 
