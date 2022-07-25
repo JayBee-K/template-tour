@@ -1038,6 +1038,10 @@
     transform: translateY(-50%);
 }
 
+.card-sidebar_order .card-body .card-item ul li + li {
+    margin-top: .25rem;
+}
+
 .card-sidebar_order .card-body .card-item .order-item {
     display: flex;
     flex-direction: column;
@@ -1115,7 +1119,7 @@
     border-top: 0;
 }
 
-.card-sidebar_order .card-footer .price{
+.card-sidebar_order .card-footer .price {
     margin-left: auto;
     padding-left: 10px;
     font-size: 1.25rem;
@@ -1736,4 +1740,66 @@
 
 .card-tour_item + .card-tour_item {
     margin-top: 1.25rem;
+}
+
+.section-form .card .card-header {
+    background-color: var(--primary-color);
+}
+
+.section-form .card .card-header .card-title {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.section-form .card .card-body .form-wrap {
+    padding: 1rem;
+    border-radius: .4rem;
+    background-color: #f9f9f9;
+    border: 1px solid var(--gray-200);
+}
+
+.section-form .card .card-body .form-wrap .form-item label {
+    font-size: 1.05rem;
+    color: var(--gray-900);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.section-form .card .card-body .form-wrap .form-item .form-control {
+    height: 44px;
+}
+
+.section-form .card .card-body .form-wrap .form-item .form-control.form-control-small {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.section-form .card .card-body .form-wrap .form-item .btn-remove {
+    background-color: var(--danger);
+    border-radius: 50%;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    color: var(--white);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.section-form .card .card-body .form-wrap .form-item .btn-remove:hover {
+    opacity: .8;
+}
+
+.section-form .card .card-body .form-wrap .form-item .btn-remove:before {
+    display: none;
+}
+
+.section-form .card .card-body .form-wrap .form-inner + .form-inner {
+    margin-top: 1rem;
+}
+
+.section-form + .section-form {
+    margin-top: 2rem;
 }
