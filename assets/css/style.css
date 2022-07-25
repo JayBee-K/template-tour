@@ -1415,24 +1415,17 @@
     visibility: visible;
 }
 
-.card-tours .card-header {
-    background-color: var(--primary-color);
-}
-
-.card-tours .card-header .card-title {
-    font-size: 1.4rem;
-    color: var(--white);
-}
-
 .card-tour_item {
     display: flex;
     align-items: stretch;
+    box-shadow: var(--shadow-hover);
+    border: 1px solid var(--gray-100);
 }
 
 .card-tour_item > * {
     padding: 1rem;
     flex-shrink: 0;
-    border-right: 1px solid var(--gray-100);
+    border-right: 1px solid var(--gray-200);
 }
 
 .card-tour_item > *:last-child {
@@ -1507,7 +1500,7 @@
 }
 
 .card-tour_item .tour-item_road .item .item-content + .item-content {
-    border-left: 1px solid var(--gray-100);
+    border-left: 1px solid var(--gray-200);
 }
 
 .card-tour_item .tour-item_road .item .item-content .text {
@@ -1538,12 +1531,6 @@
     margin-bottom: .5rem;
 }
 
-.card-tour_item .tour-item_button .price del {
-    color: var(--gray-500);
-    font-size: .85rem;
-    margin-left: 5px;
-}
-
 .card-tour_item .tour-item_button .price ins {
     text-decoration: none;
     color: var(--danger);
@@ -1558,13 +1545,10 @@
 }
 
 .card-tour_item .tour-item_road .item + .item {
-    border-top: 1px solid var(--gray-100);
+    border-top: 1px solid var(--gray-200);
 }
 
-.card-tour_item:nth-child(even) {
-    background-color: #f9f9f9;
-}
 
 .card-tour_item + .card-tour_item {
-    border-top: p1px solid var(--gray-100);
+    margin-top: 1.25rem;
 }
