@@ -6,6 +6,49 @@ const handleTouchMoveNavigation = function (ev) {
     }
 }
 
+const handleHeaderMobile = () => {
+    if (windowWidth < 992) {
+        let elmBody = $('body'),
+            elmHamburger = $('#header-hamburger'),
+            elmNavigation = $('#header-navigation'),
+            elmOverlay = $('#header-overlay'),
+            elmCloseNavigation = $('#header-navigation_close');
+
+        elmNavigation.find('ul > li > ul > li').map(function (index) {
+            $(this).parent().prev('a').attr({
+                'data-toggle': 'collapse',
+                'data-target': "#header-sub_" + index,
+            });
+            $(this).parent().attr({
+                "id": "header-sub_" + index,
+                "class": "navigation-sub collapse",
+                "data-parent": "#header-navigation"
+            });
+        });
+
+        elmHamburger.click(function () {
+            if (elmBody.hasClass('is-show_navigation')) {
+                elmBody.attr({
+                    'class': '',
+                    'style': ''
+                });
+                document.removeEventListener('touchmove', handleTouchMoveNavigation);
+                elmNavigation.find('.collapse').collapse('hide');
+            } else {
+                document.addEventListener('touchmove', handleTouchMoveNavigation, {passive: false});
+                elmBody.attr({
+                    'class': 'is-show_navigation',
+                    'style': 'overflow-y: hidden'
+                });
+            }
+        });
+
+        elmOverlay.add(elmCloseNavigation).click(() => {
+            elmHamburger.trigger('click')
+        });
+    }
+}
+
 let sliderHero = () => {
     new Swiper('#slider-hero .swiper', {
         speed: 1000,
@@ -51,6 +94,7 @@ let sliderHotDeals = () => {
 }
 
 $(function () {
+    handleHeaderMobile();
     sliderHero();
     sliderHotDeals();
 
@@ -129,7 +173,7 @@ $(function () {
     let dateReturn = '';
     $('input[name="choose-flight_chuyenbay"]').change(function (e) {
         if ($('#choose-flight-02:checked').length > 0) {
-            htmlRender = `<div class="col" id="col-mark_chuyenbay__return">
+            htmlRender = `<div class="col col-custom" id="col-mark_chuyenbay__return">
 							<div class="inner position-relative trigger-flat_chuyenbay" data-calendar="2">
 								<label  for="">Ngày trở về</label>
 								<div class="d-flex align-items-center box-inner">
@@ -638,93 +682,11 @@ $(function () {
         })
     });
 
-    $('.btn-add').click(function () {
-        $(this).parent().before(`<div class="form-inner">
-                                        <div class="row row-col-5">
-                                            <div class="col-md-5">
-                                                <div class="form-item">
-                                                    <label for="">
-                                                        Họ tên hành khách bay (<span
-                                                            class="text-danger font-weight-bold">*</span>)
-                                                    </label>
-                                                    <div class="d-flex align-item form-inputs">
-                                                        <select name="" class="form-control form-control-small" id="">
-                                                            <option value="">
-                                                                Anh
-                                                            </option>
-                                                            <option value="">
-                                                                Chị
-                                                            </option>
-                                                            <option value="">
-                                                                Ông
-                                                            </option>
-                                                            <option value="">
-                                                                Bà
-                                                            </option>
-                                                            <option value="">
-                                                                Trẻ em
-                                                            </option>
-                                                            <option value="">
-                                                                Sơ sinh
-                                                            </option>
-                                                        </select>
-                                                        <input type="text" class="form-control"
-                                                               placeholder="Nhập họ tên theo giấy tờ...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-item">
-                                                    <label for="">
-                                                        Số điện thoại (<span
-                                                            class="text-danger font-weight-bold">*</span>)
-                                                    </label>
-                                                    <div class="d-flex align-item form-inputs">
-                                                        <input type="text" class="form-control"
-                                                               placeholder="Nhập số điện thoại...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-item">
-                                                    <label for="">
-                                                        Hành lý ký gửi
-                                                    </label>
-                                                    <div class="d-flex align-item form-inputs">
-                                                        <select name="" class="form-control" id="">
-                                                            <option value="">
-                                                                Mua thêm ký gửi
-                                                            </option>
-                                                            <option value="">
-                                                                Mua 15kg - 221.000đ
-                                                            </option>
-                                                            <option value="">
-                                                                Mua 20kg - 245.000đ
-                                                            </option>
-                                                            <option value="">
-                                                                Mua 15kg - 221.000đ
-                                                            </option>
-                                                            <option value="">
-                                                                Mua 20kg - 245.000đ
-                                                            </option>
-                                                            <option value="">
-                                                                Mua 15kg - 221.000đ
-                                                            </option>
-                                                            <option value="">
-                                                                Mua 20kg - 245.000đ
-                                                            </option>
-                                                        </select>
-                                                        <button type="button" class="btn-remove button-theme button-theme_secondary">
-                                                            <span><i class="fas fa-minus"></i></span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>`);
-    });
-
-    $(document).on('click', '.btn-remove', function () {
-        $(this).closest('.form-inner').remove();
-    });
+    if (windowWidth < 992) {
+        $('.mobile-init_width .card-body').each(function () {
+            $(this).parent().css('width', $(this)[0].scrollWidth - 5 + 'px');
+            $(this).css('width', $(this)[0].scrollWidth + 'px');
+            $(this).next('.card-footer').css('width', $(this)[0].scrollWidth + 'px');
+        });
+    }
 });

@@ -39,7 +39,6 @@
 </head>
 
 <body>
-
 <header id="header" class="header">
 	<div class="container">
 		<div class="header-inner d-flex align-items-center">
@@ -48,8 +47,15 @@
 					<img src="./assets/images/logo-white.png" class="img-fluid" alt="">
 				</a>
 			</div>
-			<div class="header-navigation">
+			<div class="header-navigation" id="header-navigation">
 				<ul class="list-unstyled mb-0">
+					<li class="d-block d-lg-none header-navigation_logo">
+						<a href="">
+							<img src="./assets/images/logo-white.png" alt="">
+						</a>
+						<button type="button" class="header-navigation_close" id="header-navigation_close"><i
+								class="far fa-times"></i></button>
+					</li>
 					<li>
 						<a href="javascript:void(0)">
 							Tuyến đường
@@ -167,15 +173,49 @@
 				</ul>
 			</div>
 			<div class="header-user">
-				<a href="" class="button-theme button-theme_primary">
+				<a href="javascript:void(0)" class="button-theme button-theme_primary">
 					<span>Đăng ký</span>
 				</a>
-				<a href="" class="button-theme button-theme_secondary">
+				<a href="javascript:void(0" class="button-theme button-theme_secondary">
 					<span>Đăng nhập</span>
 				</a>
+				<a href="javascript:void(0)" class="button-theme button-theme_secondaryd-none">
+					<span>Tài khoản</span>
+				</a>
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="javascript:void(0)">
+							<span>
+								Thông tin tài khoản
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span>
+								Đổi mật khẩu
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span>
+								Đăng xuất
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="header-hamburger d-block d-lg-none">
+				<button type="button" class="no-animation" id="header-hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 			</div>
 		</div>
 	</div>
+	<div class="header-overlay" id="header-overlay"></div>
 </header>
 <div class="main">
 	<div class="section-banner position-relative">
@@ -229,7 +269,7 @@
 					<div class="tab-content">
 						<div class="tab-pane fade active show" id="chuyen-bay">
 							<div class="search-inner">
-								<div class="row row-75 mb-3">
+								<div class="row row-75 mb-lg-3">
 									<div class="form-check_inner">
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" type="radio" id="choose-flight-01"
@@ -375,7 +415,7 @@
 									</div>
 									<div class="col-lg-5">
 										<div class="row row-75">
-											<div class="col" id="col-mark_chuyenbay">
+											<div class="col col-custom" id="col-mark_chuyenbay">
 												<div class="inner position-relative trigger-flat_chuyenbay"
 													 data-calendar="1">
 													<label for="">Ngày
@@ -388,7 +428,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="col">
+											<div class="col col-custom">
 												<div class="inner position-relative passenger-dropdown form-choose-people">
 													<label for="">Hành khách</label>
 													<div class="d-flex align-items-center box-inner">
@@ -521,7 +561,7 @@
 						</div>
 						<div class="tab-pane fade" id="ve-doan">
 							<div class="search-inner">
-								<div class="row row-75 mb-3">
+								<div class="row row-75 mb-lg-3">
 									<div class="form-check_inner">
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" type="radio" id="choose-flight_vedoan-01"
@@ -668,7 +708,7 @@
 									</div>
 									<div class="col-lg-5">
 										<div class="row row-75">
-											<div class="col" id="col-mark_vedoan">
+											<div class="col col-custom" id="col-mark_vedoan">
 												<div class="inner position-relative trigger-flat_vedoan"
 													 data-calendar="1">
 													<label for="">Ngày
@@ -681,7 +721,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="col">
+											<div class="col col-custom">
 												<div class="inner position-relative passenger-dropdown form-choose-people">
 													<label for="">Hành khách</label>
 													<div class="d-flex align-items-center box-inner">
@@ -831,7 +871,7 @@
 				</div>
 			</div>
 			<div class="row row-col-10">
-				<div class="col-lg-6 col-md-4">
+				<div class="col-lg-6 col-md-4 col-6">
 					<div class="card rounded-0 border-0 position-relative overflow-hidden card-recommended">
 						<a href="" class="stretched-link"></a>
 						<div class="card-img" style="background-image: url('./assets/images/recommended/1.png')"></div>
@@ -857,9 +897,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-4">
+				<div class="col-lg-3 col-md-4 col-6">
 					<div class="card rounded-0 border-0 position-relative overflow-hidden card-recommended">
-						<a href="" class="link-cover"></a>
+						<a href="" class="stretched-link"></a>
 						<div class="card-img" style="background-image: url('./assets/images/recommended/2.webp')"></div>
 						<div class="card-img-overlay p-0">
 							<div class="card-inner w-100 h-100">
@@ -883,9 +923,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-4">
+				<div class="col-lg-3 col-md-4 col-6">
 					<div class="card rounded-0 border-0 position-relative overflow-hidden card-recommended">
-						<a href="" class="link-cover"></a>
+						<a href="" class="stretched-link"></a>
 						<div class="card-img" style="background-image: url('./assets/images/recommended/3.png')"></div>
 						<div class="card-img-overlay p-0">
 							<div class="card-inner w-100 h-100">
@@ -909,9 +949,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-4">
+				<div class="col-lg-3 col-md-4 col-6">
 					<div class="card rounded-0 border-0 position-relative overflow-hidden card-recommended">
-						<a href="" class="link-cover"></a>
+						<a href="" class="stretched-link"></a>
 						<div class="card-img" style="background-image: url('./assets/images/recommended/4.webp')"></div>
 						<div class="card-img-overlay p-0">
 							<div class="card-inner w-100 h-100">
@@ -935,9 +975,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-4">
+				<div class="col-lg-3 col-md-4 col-6">
 					<div class="card rounded-0 border-0 position-relative overflow-hidden card-recommended">
-						<a href="" class="link-cover"></a>
+						<a href="" class="stretched-link"></a>
 						<div class="card-img" style="background-image: url('./assets/images/recommended/5.png')"></div>
 						<div class="card-img-overlay p-0">
 							<div class="card-inner w-100 h-100">
@@ -961,9 +1001,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-4">
+				<div class="col-lg-6 col-md-4 col-6">
 					<div class="card rounded-0 border-0 position-relative overflow-hidden card-recommended">
-						<a href="" class="link-cover"></a>
+						<a href="" class="stretched-link"></a>
 						<div class="card-img" style="background-image: url('./assets/images/recommended/6.png')"></div>
 						<div class="card-img-overlay p-0">
 							<div class="card-inner w-100 h-100">
@@ -1065,6 +1105,9 @@
 						<div class="title">
 							Tuyến vé đoàn nổi bật
 						</div>
+						<div class="desc">
+							Săn vé giá rẻ trong nước và quốc tế.
+						</div>
 					</div>
 					<div class="card-tour_item">
 						<div class="tour-item_image">
@@ -1106,6 +1149,14 @@
 								</span>
 								<span class="desc price">
 									4,500,000 VNĐ
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Số ghế còn
+								</span>
+								<span class="desc">
+									12/45
 								</span>
 							</div>
 						</div>
@@ -1157,102 +1208,12 @@
 									4,500,000 VNĐ
 								</span>
 							</div>
-						</div>
-						<div class="tour-item_button">
-							<a class="button-theme button-theme_primary" href="">
-								<span>Xem chi tiết <i class="fas fa-search"></i></span>
-							</a>
-						</div>
-					</div>
-					<div class="card-tour_item">
-						<div class="tour-item_image">
-							<img src="https://vedoan.com/storage/photos/1/Airlines/qh.png" class="img-fluid"
-								 alt="">
-							<div class="airways">
-								Bamboo Airways
-							</div>
-						</div>
-						<div class="tour-item_content">
-							<div class="title">
-								HAN-VCS-HAN <span class="text-danger">(Khứ hồi)</span>
-							</div>
-							<div class="meta">
-								<span class="text"><i class="fal fa-suitcase-rolling"></i>Hành lý</span>
-								<span class="desc">7kg + 15kg</span>
-							</div>
-						</div>
-						<div class="tour-item_road">
 							<div class="item-content">
 								<span class="text">
-									Ngày khởi hành
+									Số ghế còn
 								</span>
 								<span class="desc">
-									31-07-2022
-								</span>
-							</div>
-							<div class="item-content">
-								<span class="text">
-									Ngày về
-								</span>
-								<span class="desc">
-									07-08-2022
-								</span>
-							</div>
-							<div class="item-content">
-								<span class="text">
-									Giá vé
-								</span>
-								<span class="desc price">
-									4,500,000 VNĐ
-								</span>
-							</div>
-						</div>
-						<div class="tour-item_button">
-							<a class="button-theme button-theme_primary" href="">
-								<span>Xem chi tiết <i class="fas fa-search"></i></span>
-							</a>
-						</div>
-					</div>
-					<div class="card-tour_item">
-						<div class="tour-item_image">
-							<img src="https://vedoan.com/storage/photos/1/Airlines/qh.png" class="img-fluid"
-								 alt="">
-							<div class="airways">
-								Bamboo Airways
-							</div>
-						</div>
-						<div class="tour-item_content">
-							<div class="title">
-								HAN-VCS-HAN <span class="text-danger">(Khứ hồi)</span>
-							</div>
-							<div class="meta">
-								<span class="text"><i class="fal fa-suitcase-rolling"></i>Hành lý</span>
-								<span class="desc">7kg + 15kg</span>
-							</div>
-						</div>
-						<div class="tour-item_road">
-							<div class="item-content">
-								<span class="text">
-									Ngày khởi hành
-								</span>
-								<span class="desc">
-									31-07-2022
-								</span>
-							</div>
-							<div class="item-content">
-								<span class="text">
-									Ngày về
-								</span>
-								<span class="desc">
-									07-08-2022
-								</span>
-							</div>
-							<div class="item-content">
-								<span class="text">
-									Giá vé
-								</span>
-								<span class="desc price">
-									4,500,000 VNĐ
+									12/45
 								</span>
 							</div>
 						</div>
@@ -1304,6 +1265,14 @@
 									4,500,000 VNĐ
 								</span>
 							</div>
+							<div class="item-content">
+								<span class="text">
+									Số ghế còn
+								</span>
+								<span class="desc">
+									12/45
+								</span>
+							</div>
 						</div>
 						<div class="tour-item_button">
 							<a class="button-theme button-theme_primary" href="">
@@ -1353,6 +1322,14 @@
 									4,500,000 VNĐ
 								</span>
 							</div>
+							<div class="item-content">
+								<span class="text">
+									Số ghế còn
+								</span>
+								<span class="desc">
+									12/45
+								</span>
+							</div>
 						</div>
 						<div class="tour-item_button">
 							<a class="button-theme button-theme_primary" href="">
@@ -1400,6 +1377,299 @@
 								</span>
 								<span class="desc price">
 									4,500,000 VNĐ
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Số ghế còn
+								</span>
+								<span class="desc">
+									12/45
+								</span>
+							</div>
+						</div>
+						<div class="tour-item_button">
+							<a class="button-theme button-theme_primary" href="">
+								<span>Xem chi tiết <i class="fas fa-search"></i></span>
+							</a>
+						</div>
+					</div>
+					<div class="card-tour_item">
+						<div class="tour-item_image">
+							<img src="https://vedoan.com/storage/photos/1/Airlines/qh.png" class="img-fluid"
+								 alt="">
+							<div class="airways">
+								Bamboo Airways
+							</div>
+						</div>
+						<div class="tour-item_content">
+							<div class="title">
+								HAN-VCS-HAN <span class="text-danger">(Khứ hồi)</span>
+							</div>
+							<div class="meta">
+								<span class="text"><i class="fal fa-suitcase-rolling"></i>Hành lý</span>
+								<span class="desc">7kg + 15kg</span>
+							</div>
+						</div>
+						<div class="tour-item_road">
+							<div class="item-content">
+								<span class="text">
+									Ngày khởi hành
+								</span>
+								<span class="desc">
+									31-07-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Ngày về
+								</span>
+								<span class="desc">
+									07-08-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Giá vé
+								</span>
+								<span class="desc price">
+									4,500,000 VNĐ
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Số ghế còn
+								</span>
+								<span class="desc">
+									12/45
+								</span>
+							</div>
+						</div>
+						<div class="tour-item_button">
+							<a class="button-theme button-theme_primary" href="">
+								<span>Xem chi tiết <i class="fas fa-search"></i></span>
+							</a>
+						</div>
+					</div>
+					<div class="card-tour_item">
+						<div class="tour-item_image">
+							<img src="https://vedoan.com/storage/photos/1/Airlines/qh.png" class="img-fluid"
+								 alt="">
+							<div class="airways">
+								Bamboo Airways
+							</div>
+						</div>
+						<div class="tour-item_content">
+							<div class="title">
+								HAN-VCS-HAN <span class="text-danger">(Khứ hồi)</span>
+							</div>
+							<div class="meta">
+								<span class="text"><i class="fal fa-suitcase-rolling"></i>Hành lý</span>
+								<span class="desc">7kg + 15kg</span>
+							</div>
+						</div>
+						<div class="tour-item_road">
+							<div class="item-content">
+								<span class="text">
+									Ngày khởi hành
+								</span>
+								<span class="desc">
+									31-07-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Ngày về
+								</span>
+								<span class="desc">
+									07-08-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Giá vé
+								</span>
+								<span class="desc price">
+									4,500,000 VNĐ
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Số ghế còn
+								</span>
+								<span class="desc">
+									12/45
+								</span>
+							</div>
+						</div>
+						<div class="tour-item_button">
+							<a class="button-theme button-theme_primary" href="">
+								<span>Xem chi tiết <i class="fas fa-search"></i></span>
+							</a>
+						</div>
+					</div>
+					<div class="card-tour_item">
+						<div class="tour-item_image">
+							<img src="https://vedoan.com/storage/photos/1/Airlines/qh.png" class="img-fluid"
+								 alt="">
+							<div class="airways">
+								Bamboo Airways
+							</div>
+						</div>
+						<div class="tour-item_content">
+							<div class="title">
+								HAN-VCS-HAN <span class="text-danger">(Khứ hồi)</span>
+							</div>
+							<div class="meta">
+								<span class="text"><i class="fal fa-suitcase-rolling"></i>Hành lý</span>
+								<span class="desc">7kg + 15kg</span>
+							</div>
+						</div>
+						<div class="tour-item_road">
+							<div class="item-content">
+								<span class="text">
+									Ngày khởi hành
+								</span>
+								<span class="desc">
+									31-07-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Ngày về
+								</span>
+								<span class="desc">
+									07-08-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Giá vé
+								</span>
+								<span class="desc price">
+									4,500,000 VNĐ
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Số ghế còn
+								</span>
+								<span class="desc">
+									12/45
+								</span>
+							</div>
+						</div>
+						<div class="tour-item_button">
+							<a class="button-theme button-theme_primary" href="">
+								<span>Xem chi tiết <i class="fas fa-search"></i></span>
+							</a>
+						</div>
+					</div>
+					<div class="card-tour_item">
+						<div class="tour-item_image">
+							<img src="https://vedoan.com/storage/photos/1/Airlines/qh.png" class="img-fluid"
+								 alt="">
+							<div class="airways">
+								Bamboo Airways
+							</div>
+						</div>
+						<div class="tour-item_content">
+							<div class="title">
+								HAN-VCS-HAN <span class="text-danger">(Khứ hồi)</span>
+							</div>
+							<div class="meta">
+								<span class="text"><i class="fal fa-suitcase-rolling"></i>Hành lý</span>
+								<span class="desc">7kg + 15kg</span>
+							</div>
+						</div>
+						<div class="tour-item_road">
+							<div class="item-content">
+								<span class="text">
+									Ngày khởi hành
+								</span>
+								<span class="desc">
+									31-07-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Ngày về
+								</span>
+								<span class="desc">
+									07-08-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Giá vé
+								</span>
+								<span class="desc price">
+									4,500,000 VNĐ
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Số ghế còn
+								</span>
+								<span class="desc">
+									12/45
+								</span>
+							</div>
+						</div>
+						<div class="tour-item_button">
+							<a class="button-theme button-theme_primary" href="">
+								<span>Xem chi tiết <i class="fas fa-search"></i></span>
+							</a>
+						</div>
+					</div>
+					<div class="card-tour_item">
+						<div class="tour-item_image">
+							<img src="https://vedoan.com/storage/photos/1/Airlines/qh.png" class="img-fluid"
+								 alt="">
+							<div class="airways">
+								Bamboo Airways
+							</div>
+						</div>
+						<div class="tour-item_content">
+							<div class="title">
+								HAN-VCS-HAN <span class="text-danger">(Khứ hồi)</span>
+							</div>
+							<div class="meta">
+								<span class="text"><i class="fal fa-suitcase-rolling"></i>Hành lý</span>
+								<span class="desc">7kg + 15kg</span>
+							</div>
+						</div>
+						<div class="tour-item_road">
+							<div class="item-content">
+								<span class="text">
+									Ngày khởi hành
+								</span>
+								<span class="desc">
+									31-07-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Ngày về
+								</span>
+								<span class="desc">
+									07-08-2022
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Giá vé
+								</span>
+								<span class="desc price">
+									4,500,000 VNĐ
+								</span>
+							</div>
+							<div class="item-content">
+								<span class="text">
+									Số ghế còn
+								</span>
+								<span class="desc">
+									12/45
 								</span>
 							</div>
 						</div>
@@ -1425,7 +1695,7 @@
 			<div class="row">
 				<div class="col-md-8">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="footer-item">
 								<div class="footer-title">
 									Về chúng tôi
@@ -1456,7 +1726,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="footer-item">
 								<div class="footer-title">
 									Xe khách liên tỉnh
@@ -1497,7 +1767,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="footer-item">
 								<div class="footer-title">
 									Xe khách liên tỉnh
@@ -1538,7 +1808,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="footer-item">
 								<div class="footer-title">
 									Xe khách liên tỉnh
@@ -1588,7 +1858,7 @@
 						</div>
 						<div class="footer-images">
 							<div class="row row-col-5">
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner1.png&w=128&q=75"
@@ -1596,7 +1866,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner4.png&w=128&q=75"
@@ -1604,7 +1874,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner5.png&w=128&q=75"
@@ -1612,7 +1882,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner1.png&w=128&q=75"
@@ -1620,7 +1890,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner4.png&w=128&q=75"
@@ -1628,7 +1898,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner5.png&w=128&q=75"
@@ -1729,7 +1999,6 @@
 		src="./assets/plugins/bootstrap-flatpickr/bootstrap-flatpickr.js"></script>
 <script type="text/javascript"
 		src="./assets/plugins/bootstrap-flatpickr/bootstrap-flatpickr-vn.js"></script>
-<script type="text/javascript"
 <script type="text/javascript"
 		src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript"

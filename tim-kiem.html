@@ -38,7 +38,6 @@
 	</style>
 </head>
 <body>
-
 <header id="header" class="header">
 	<div class="container">
 		<div class="header-inner d-flex align-items-center">
@@ -47,8 +46,15 @@
 					<img src="./assets/images/logo-white.png" class="img-fluid" alt="">
 				</a>
 			</div>
-			<div class="header-navigation">
+			<div class="header-navigation" id="header-navigation">
 				<ul class="list-unstyled mb-0">
+					<li class="d-block d-lg-none header-navigation_logo">
+						<a href="">
+							<img src="./assets/images/logo-white.png" alt="">
+						</a>
+						<button type="button" class="header-navigation_close" id="header-navigation_close"><i
+								class="far fa-times"></i></button>
+					</li>
 					<li>
 						<a href="javascript:void(0)">
 							Tuyến đường
@@ -166,13 +172,13 @@
 				</ul>
 			</div>
 			<div class="header-user">
-				<a href="" class="button-theme button-theme_primary d-none">
+				<a href="javascript:void(0)" class="button-theme button-theme_primary d-none">
 					<span>Đăng ký</span>
 				</a>
-				<a href="" class="button-theme button-theme_secondary d-none">
+				<a href="javascript:void(0" class="button-theme button-theme_secondary d-none">
 					<span>Đăng nhập</span>
 				</a>
-				<a href="" class="button-theme button-theme_secondary">
+				<a href="javascript:void(0)" class="button-theme button-theme_secondary">
 					<span>Tài khoản</span>
 				</a>
 				<ul class="list-unstyled mb-0">
@@ -199,8 +205,16 @@
 					</li>
 				</ul>
 			</div>
+			<div class="header-hamburger d-block d-lg-none">
+				<button type="button" class="no-animation" id="header-hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
 		</div>
 	</div>
+	<div class="header-overlay" id="header-overlay"></div>
 </header>
 <div class="main">
 	<div class="section-banner position-relative">
@@ -227,7 +241,7 @@
 					<div class="tab-content">
 						<div class="tab-pane fade active show" id="chuyen-bay">
 							<div class="search-inner">
-								<div class="row row-75 mb-3">
+								<div class="row row-75 mb-lg-3">
 									<div class="form-check_inner">
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" type="radio" id="choose-flight-01"
@@ -373,7 +387,7 @@
 									</div>
 									<div class="col-lg-5">
 										<div class="row row-75">
-											<div class="col" id="col-mark_chuyenbay">
+											<div class="col col-custom" id="col-mark_chuyenbay">
 												<div class="inner position-relative trigger-flat_chuyenbay"
 													 data-calendar="1">
 													<label for="">Ngày
@@ -386,7 +400,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="col">
+											<div class="col col-custom">
 												<div class="inner position-relative passenger-dropdown form-choose-people">
 													<label for="">Hành khách</label>
 													<div class="d-flex align-items-center box-inner">
@@ -519,7 +533,7 @@
 						</div>
 						<div class="tab-pane fade" id="ve-doan">
 							<div class="search-inner">
-								<div class="row row-75 mb-3">
+								<div class="row row-75 mb-lg-3">
 									<div class="form-check_inner">
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" type="radio" id="choose-flight_vedoan-01"
@@ -666,7 +680,7 @@
 									</div>
 									<div class="col-lg-5">
 										<div class="row row-75">
-											<div class="col" id="col-mark_vedoan">
+											<div class="col col-custom" id="col-mark_vedoan">
 												<div class="inner position-relative trigger-flat_vedoan"
 													 data-calendar="1">
 													<label for="">Ngày
@@ -679,7 +693,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="col">
+											<div class="col col-custom">
 												<div class="inner position-relative passenger-dropdown form-choose-people">
 													<label for="">Hành khách</label>
 													<div class="d-flex align-items-center box-inner">
@@ -822,7 +836,7 @@
 					<div class="section-flight" id="wrapper-detail_flight">
 						<div class="flight-order bg-white rounded shadow-sm border">
 							<div class="top">
-								<div class="p-3 d-flex align-items-center justify-content-between">
+								<div class="p-3 d-lg-flex align-items-center justify-content-between">
 									<div class="inner">
 										<div class="title font-weight-bold mb-0">
 											<i class="fad fa-plane-departure mb-0 mr-1"></i> Hà Nội <i
@@ -832,7 +846,7 @@
 											Thứ năm, 21 tháng 07 năm 2022
 										</div>
 									</div>
-									<div class="text-danger font-weight-bold text-right">
+									<div class="text-danger font-weight-bold text-lg-right">
 										Giá vé chưa gồm thuế và phí
 									</div>
 								</div>
@@ -888,7 +902,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -931,9 +945,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -946,7 +960,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -959,7 +973,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -974,16 +988,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -1060,30 +1074,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -1094,7 +1108,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -1137,9 +1151,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -1152,7 +1166,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -1165,7 +1179,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -1180,16 +1194,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -1266,30 +1280,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -1300,7 +1314,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -1343,9 +1357,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -1358,7 +1372,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -1371,7 +1385,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -1386,16 +1400,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -1472,30 +1486,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -1506,7 +1520,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -1549,9 +1563,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -1564,7 +1578,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -1577,7 +1591,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -1592,16 +1606,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -1678,30 +1692,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -1712,7 +1726,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -1755,9 +1769,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -1770,7 +1784,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -1783,7 +1797,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -1798,16 +1812,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -1884,30 +1898,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -1918,7 +1932,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -1961,9 +1975,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -1976,7 +1990,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -1989,7 +2003,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -2004,16 +2018,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -2090,30 +2104,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -2124,7 +2138,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -2167,9 +2181,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -2182,7 +2196,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -2195,7 +2209,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -2210,16 +2224,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -2296,30 +2310,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -2330,7 +2344,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -2373,9 +2387,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -2388,7 +2402,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -2401,7 +2415,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -2416,16 +2430,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -2502,30 +2516,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -2536,7 +2550,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -2579,9 +2593,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -2594,7 +2608,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -2607,7 +2621,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -2622,16 +2636,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -2708,30 +2722,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -2742,7 +2756,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -2785,9 +2799,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -2800,7 +2814,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -2813,7 +2827,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -2828,16 +2842,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -2914,30 +2928,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -2948,7 +2962,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -2991,9 +3005,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -3006,7 +3020,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -3019,7 +3033,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -3034,16 +3048,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -3120,30 +3134,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -3154,7 +3168,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -3197,9 +3211,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -3212,7 +3226,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -3225,7 +3239,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -3240,16 +3254,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -3326,30 +3340,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -3360,7 +3374,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-flight card">
+						<div class="card-flight mobile-init_width card">
 							<div class="card-body">
 								<a href="" class="card-link">
 									<div class="card-image">
@@ -3403,9 +3417,9 @@
 								<div class="card-inner">
 									<div class="top">
 										<div class="row row-col-5">
-											<div class="col-md-8">
+											<div class="col-8">
 												<div class="row row-col-5">
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-right">
 															<div class="title">
 																TP Hồ Chí Minh (SGN)
@@ -3418,7 +3432,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-center">
 															<div class="text">
 																2 giờ 10 phút
@@ -3431,7 +3445,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-4">
 														<div class="text-left">
 															<div class="title">
 																Hà Nội (HAN)
@@ -3446,16 +3460,16 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4">
+											<div class="col-4">
 												<div class="row row-col-5 align-items-center">
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-right">
 															<div class="logo">
 																<img src="./assets/images/logo/VietJetAir.png" alt="">
 															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-6">
 														<div class="text-left">
 															<div class="text">
 																Vietjet Air
@@ -3532,30 +3546,30 @@
 												Điều kiện hành lý
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hàng lý xách tay
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													7kg
 												</div>
 											</div>
 											<div class="row mt-1">
-												<div class="col-md-3">
+												<div class="col-3">
 													Hành Lý Ký Gửi
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													Vui lòng chọn ở bước tiếp theo
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
-												<div class="col-md-3">
+												<div class="col-3">
 													<div class="title">
 														Điều Kiện Về Vé
 													</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-9">
 													- Áp dụng đổi vé mất phí <br>
 													- Áp dụng hoàn vé mất phí <br>
 													- Không áp dụng đổi tên
@@ -3569,127 +3583,50 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-4">
-					<div class="card-sidebar">
-						<div class="card-sidebar_item card-sidebar_order card">
-							<div class="card-header">
-								<div class="card-title">
-									Thông tin đặt vé
-								</div>
-							</div>
-							<div class="card-body">
-								<div class="order-item">
-									<input type="text" class="form-control" value="Nguyễn Văn Cường" readonly disabled>
-								</div>
-								<div class="card-item">
-									<div class="card-text">
-										Chuyến đi
-									</div>
-									<div class="card-desc">
-										<div class="top">
-											<span>Tp. Hồ Chí Minh (SGN)</span>
-											<span class="icon"><i class="fad fa-plane"></i></span>
-											<span>Hà Nội (HAN)</span>
-										</div>
-										<div class="bottom">
-											<span>T5, 04/08/2022</span>
-											<span>05:00 - 07:15</span>
-											<span>VJ166</span>
-										</div>
-									</div>
-									<div class="order-item" id="chuyendi_collapse">
-										<div class="order-item_collapse">
-											<button class="form-control" type="button" data-toggle="collapse"
-													data-target="#chuyendi_giave">
-												<span class="text">Giá vé</span>
-												<span class="price">3,985,200 VNĐ</span>
-												<span class="icon"><i class="fas fa-caret-down"></i></span>
-											</button>
-											<div class="collapse" id="chuyendi_giave" data-parent="#chuyendi_collapse">
-												<div class="order-item_collapse__desc">
-													<div class="order-item_collapse__desc--item">
-														<span>Skyboss</span>
-														<span>3.690.000</span>
-													</div>
-													<div class="order-item_collapse__desc--item">
-														<span>Thuế VAT</span>
-														<span>295.200</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="order-item_collapse">
-											<button class="form-control" type="button" data-toggle="collapse"
-													data-target="#chuyendi_thue">
-												<span class="text">Thuế, phí</span>
-												<span class="price">552,000 VNĐ</span>
-												<span class="icon"><i class="fas fa-caret-down"></i></span>
-											</button>
-											<div class="collapse" id="chuyendi_thue" data-parent="#chuyendi_collapse">
-												<div class="order-item_collapse__desc">
-													<div class="order-item_collapse__desc--item">
-														<span>Phụ thu dịch vụ hệ thống (Quốc nội)</span>
-														<span>200.000</span>
-													</div>
-													<div class="order-item_collapse__desc--item">
-														<span>Phụ thu quản trị hệ thống</span>
-														<span>200.000</span>
-													</div>
-													<div class="order-item_collapse__desc--item">
-														<span>Phí an ninh soi chiếu</span>
-														<span>20.000</span>
-													</div>
-													<div class="order-item_collapse__desc--item">
-														<span>Phí sân bay quốc nội</span>
-														<span>100.000</span>
-													</div>
-													<div class="order-item_collapse__desc--item">
-														<span>Thuế VAT</span>
-														<span>32.000</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="order-item_collapse">
-											<button class="form-control" type="button" data-toggle="collapse"
-													data-target="#chuyendi_dichvu">
-												<span class="text">Dịch vụ</span>
-												<span class="price">0 VNĐ</span>
-												<span class="icon"><i class="fas fa-caret-down"></i></span>
-											</button>
-											<div class="collapse" id="chuyendi_dichvu" data-parent="#chuyendi_collapse">
-												<div class="order-item_collapse__desc">
-													<div class="order-item_collapse__desc--item">
-														<div class="title w-100 font-weight-bold">
-															Hành lý
-														</div>
-														<span>Gói 30kg (miễn phí)</span>
-														<span>0</span>
-													</div>
-													<div class="order-item_collapse__desc--item">
-														<div class="title w-100 font-weight-bold">
-															Suất ăn nóng
-														</div>
-														<span>Miễn phí 1 suất ăn nóng</span>
-														<span>0</span>
-													</div>
-													<div class="order-item_collapse__desc--item">
-														<div class="title w-100 font-weight-bold">
-															Ưu tiên làm thủ tục nhanh
-														</div>
-														<span>Miễn phí dịch vụ ưu tiên check-in</span>
-														<span>0</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="card-footer">
-								<span>Tổng tiền</span>
-								<span class="price">4.537.200 VNĐ</span>
+					<div class="card-sidebar"><div class="card-sidebar_item card-sidebar_order card">
+						<div class="card-header">
+							<div class="card-title">
+								Thông tin đặt vé
 							</div>
 						</div>
+						<div class="card-body">
+							<div class="card-item">
+								<div class="card-text">
+									Chuyến đi
+								</div>
+								<div class="card-desc">
+									<div class="top">
+										<span>Tp. Hồ Chí Minh (SGN)</span>
+										<span class="icon"><i class="fad fa-plane"></i></span>
+										<span>Hà Nội (HAN)</span>
+									</div>
+									<div class="bottom">
+										<span>T5, 04/08/2022</span>
+										<span>05:00 - 07:15</span>
+										<span>VJ166</span>
+									</div>
+								</div>
+								<div class="order-item">
+									<div class="order-item_collapse">
+										<div class="form-control">
+											<span class="text">Giá vé</span>
+											<span class="price">3,985,200 VNĐ</span>
+										</div>
+									</div>
+									<div class="order-item_collapse">
+										<div class="form-control">
+											<span class="text">Thuế, phí</span>
+											<span class="price">552,000 VNĐ</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<span>Tổng tiền</span>
+							<span class="price">4.537.200 VNĐ</span>
+						</div>
+					</div>
 						<div class="card-sidebar_item card">
 							<div class="card-header">
 								<div class="card-title">
@@ -3901,7 +3838,7 @@
 			<div class="row">
 				<div class="col-md-8">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="footer-item">
 								<div class="footer-title">
 									Về chúng tôi
@@ -3932,7 +3869,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="footer-item">
 								<div class="footer-title">
 									Xe khách liên tỉnh
@@ -3973,7 +3910,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="footer-item">
 								<div class="footer-title">
 									Xe khách liên tỉnh
@@ -4014,7 +3951,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="footer-item">
 								<div class="footer-title">
 									Xe khách liên tỉnh
@@ -4064,7 +4001,7 @@
 						</div>
 						<div class="footer-images">
 							<div class="row row-col-5">
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner1.png&w=128&q=75"
@@ -4072,7 +4009,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner4.png&w=128&q=75"
@@ -4080,7 +4017,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner5.png&w=128&q=75"
@@ -4088,7 +4025,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner1.png&w=128&q=75"
@@ -4096,7 +4033,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner4.png&w=128&q=75"
@@ -4104,7 +4041,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-6 col-lg-4 col-md-3">
 									<div class="footer-image">
 										<a href="">
 											<img src="https://haivan.com/_next/image?url=%2Fassets%2Fimages%2Fpartner5.png&w=128&q=75"
@@ -4137,11 +4074,13 @@
 							Công ty liên doanh vận chuyển quốc tế Hải Vân
 						</div>
 						<div class="footer-text">
-							Địa chỉ ĐKKD: Số 10.15 Lương Thế Vinh, khu ĐTM phía Đông, P. Hải Tân, Tp. Hải Dương, T. Hải
+							Địa chỉ ĐKKD: Số 10.15 Lương Thế Vinh, khu ĐTM phía Đông, P. Hải Tân, Tp. Hải Dương, T.
+							Hải
 							Dương
 						</div>
 						<div class="footer-text">
-							Giấy chứng nhận ĐKKD số 0800290724 do sở KH&ĐT tỉnh Hải Dương cấp lần đầu ngày 18/04/2008
+							Giấy chứng nhận ĐKKD số 0800290724 do sở KH&ĐT tỉnh Hải Dương cấp lần đầu ngày
+							18/04/2008
 						</div>
 						<div class="footer-text">
 							Bản quyền © 2022 <b>Nencer.com</b>
@@ -4203,7 +4142,6 @@
 		src="./assets/plugins/bootstrap-flatpickr/bootstrap-flatpickr.js"></script>
 <script type="text/javascript"
 		src="./assets/plugins/bootstrap-flatpickr/bootstrap-flatpickr-vn.js"></script>
-<script type="text/javascript"
 <script type="text/javascript"
 		src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript"
