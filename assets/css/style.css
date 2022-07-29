@@ -1679,6 +1679,17 @@
     width: 14px;
 }
 
+.card-tour_item .tour-item_content .meta .desc {
+    color: var(--gray-700)
+}
+
+.card-tour_item .tour-item_content .meta .desc.price {
+    text-decoration: none;
+    color: var(--danger);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
 .card-tour_item .tour-item_road {
     padding: 0;
     width: 48%;
@@ -1798,7 +1809,7 @@
         overflow-x: hidden;
         overflow-y: auto;
         width: 100%;
-        max-width: 350px;
+        max-width: 280px;
         -webkit-transition: visibility .5s cubic-bezier(.645, .045, .355, 1), opacity .5s cubic-bezier(.645, .045, .355, 1), -webkit-transform .5s cubic-bezier(.645, .045, .355, 1);
         transition: visibility .5s cubic-bezier(.645, .045, .355, 1), opacity .5s cubic-bezier(.645, .045, .355, 1), -webkit-transform .5s cubic-bezier(.645, .045, .355, 1);
         -o-transition: transform .5s cubic-bezier(.645, .045, .355, 1), visibility .5s cubic-bezier(.645, .045, .355, 1), opacity .5s cubic-bezier(.645, .045, .355, 1);
@@ -2240,7 +2251,8 @@
     }
 
     .section-search .search-inner .col-custom {
-        width: 50%;
+        width: 100%;
+        flex: 1 1 100%;
     }
 
     .section-search .search-inner .col-custom:nth-child(3) {
@@ -2306,17 +2318,18 @@
     }
 
     .card-tour_item .tour-item_content {
-        width: 60%;
-        max-width: 300px;
+        width: 70%;
+        max-width: 360px;
     }
 
     .card-tour_item .tour-item_road {
         width: auto;
-        min-width: 520px;
+        min-width: 380px;
     }
 
     .card-tour_item .tour-item_road .item-content {
         padding: .5rem 1rem;
+        width: 33.3333%;
     }
 
     .card-tour_item .tour-item_road .item-content *,
