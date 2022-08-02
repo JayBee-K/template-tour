@@ -682,11 +682,11 @@ $(function () {
         })
     });
 
-    if (windowWidth < 992) {
-        $('.mobile-init_width .card-body').each(function () {
-            $(this).parent().css('width', $(this)[0].scrollWidth - 5 + 'px');
-            $(this).css('width', $(this)[0].scrollWidth + 'px');
-            $(this).next('.card-footer').css('width', $(this)[0].scrollWidth + 'px');
-        });
-    }
+    // if (windowWidth < 992) {
+    //     $('.mobile-init_width .card-body').each(function () {
+    //         $(this).parent().css('width', $(this)[0].scrollWidth - 5 + 'px');
+    //         $(this).css('width', $(this)[0].scrollWidth + 'px');
+    //         $(this).next('.card-footer').css('width', $(this)[0].scrollWidth + 'px');
+    //     });
+    // }
 });

@@ -1127,6 +1127,129 @@
     font-weight: 700;
 }
 
+.section-flight {
+    position: relative;
+}
+
+.section-flight .section-flight_loading {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .9);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 15px 50px;
+}
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 .section-flight .flight-order .top .title {
     color: var(--gray-900);
     font-size: 1.2rem;
@@ -1315,9 +1438,14 @@
     border: 0;
     padding: 0;
     background-color: transparent;
+    display: flex
 }
 
-.card-flight .card-body .card-link > .card-toggle > button > span {
+.card-flight .card-body .card-link > .card-toggle > button > span:first-child {
+    margin-right: .35rem;
+}
+
+.card-flight .card-body .card-link > .card-toggle > button > span:last-child {
     height: 20px;
     width: 20px;
     background-color: #efefef;
@@ -1355,6 +1483,10 @@
     background-color: var(--danger);
     color: var(--white);
     box-shadow: 1px 1px 2px #eeeeee;
+}
+
+.card-flight .card-body .card-link > .card-button > span span {
+    margin-left: .25rem;
 }
 
 .card-flight .card-footer .card-inner {
@@ -2363,10 +2495,46 @@
 
     .card-flight .card-body .card-link > * {
         width: auto !important;
+        padding: 7px;
+    }
+
+    .card-flight .card-body .card-link > .card-code,
+    .card-flight .card-body .card-link > .card-meta {
+        display: none;
+    }
+
+    .card-flight .card-body .card-link > .card-time,
+    .card-flight .card-body .card-link > .card-price {
+        font-size: 1rem;
     }
 
     .card-flight .card-footer .bottom {
         overflow: hidden;
+    }
+
+    .card-flight .card-footer .card-inner .middle {
+        overflow-x: auto;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .card-flight .card-footer .card-inner .middle::-webkit-scrollbar {
+        width: 10px;
+        height: 4px;
+    }
+
+    .card-flight .card-footer .card-inner .middle::-webkit-scrollbar-track {
+        background: #cecece;
+        height: 4px;
+    }
+
+    .card-flight .card-footer .card-inner .middle::-webkit-scrollbar-thumb {
+        background: #afafaf;
+        height: 4px;
+    }
+
+    .card-flight .card-footer .card-inner .middle::-webkit-scrollbar-thumb:hover {
+        height: 4px;
     }
 
     .section-form .card .card-body {
@@ -2376,5 +2544,9 @@
     .section-form .card .card-body .form-wrap {
         border: 0;
         border-radius: 0;
+    }
+
+    .section-banner_mb {
+        margin: 0 -15px -30px;
     }
 }
